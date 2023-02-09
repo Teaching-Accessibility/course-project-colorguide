@@ -1,0 +1,32 @@
+
+body {
+  background-color: #EEEEEE;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.popup {
+  color: #333333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  width: 300px;
+  height: 320px;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
