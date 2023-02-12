@@ -20,8 +20,9 @@ function captureCurrentPixel(e) {
 			// To-Do: Style div
 			let div = document.createElement('div');
 			div.style.position = 'absolute';
-			div.style.top = e.clientY + 'px';
-			div.style.left = e.clientX + 'px';
+			div.style.top = e.pageY + 'px';
+			div.style.left = e.pageX + 'px';
+			div.style.zIndex = "99"
 			div.innerHTML = hexColor
 			document.body.appendChild(div);
 		}
@@ -89,7 +90,9 @@ const toggleOff = () => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.toggleOn === "true") {
 		toggleOn ()
+		console.log(`Tool turned on`)
 	} else if (request.toggleOn === "false") {
 		toggleOff ()
+		console.log(`Tool turned off`)
 	}
 });

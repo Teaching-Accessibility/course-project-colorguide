@@ -7,18 +7,6 @@ chrome.commands.onCommand.addListener((command) => {
 	if (command === 'toggle'){
 		on = !on
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-			if (on) {
-				chrome.scripting.executeScript({
-					target : {tabId : tabs[0].id},
-					func : () => {console.log(`Tool turned on`)},
-				});
-			} else {
-				chrome.scripting.executeScript({
-					target : {tabId : tabs[0].id},
-					func : () => {console.log(`Tool turned off`)},
-				});
-			}
-
 			chrome.tabs.sendMessage(tabs[0].id, {toggleOn: on? "true":"false"});
         })
 	}
@@ -36,18 +24,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	else if (request.message === 'toggle'){
 		on = !on
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-			if (on) {
-				chrome.scripting.executeScript({
-					target : {tabId : tabs[0].id},
-					func : () => {console.log(`Tool turned on`)},
-				});
-			} else {
-				chrome.scripting.executeScript({
-					target : {tabId : tabs[0].id},
-					func : () => {console.log(`Tool turned off`)},
-				});
-			}
-
 			chrome.tabs.sendMessage(tabs[0].id, {toggleOn: on? "true":"false"});
         })
 	}
