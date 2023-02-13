@@ -22,6 +22,7 @@ function captureCurrentPixel(e) {
 			div.style.position = 'absolute';
 			div.style.top = e.pageY + 'px';
 			div.style.left = e.pageX + 'px';
+			div.style.backgroundColor = '#ffffff';
 			div.style.zIndex = "99"
 			div.innerHTML = hexColor
 			document.body.appendChild(div);
