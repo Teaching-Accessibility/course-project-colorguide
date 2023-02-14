@@ -3,8 +3,13 @@ let tempCanvas = document.createElement('canvas');
 let tempContext = tempCanvas.getContext('2d', { willReadFrequently: true });
 
 function captureCurrentPixel(e) {
+	console.log (e.target)
 	let hexColor;
+	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child") {
+		return;
+	}
 
+	console.log("Capturing...")
 	chrome.runtime.sendMessage({message: 'capture'}, (currentScreen) => {
 		let img = new Image();
 		img.src = currentScreen.imgSrc;
@@ -17,14 +22,7 @@ function captureCurrentPixel(e) {
 			// Use pixel ratio to make sure it works on screens with very high resolutions like Retina
 			hexColor = getColor(e.clientX * window.devicePixelRatio, e.clientY * window.devicePixelRatio);
 
-			// To-Do: Style div
-			let div = document.createElement('div');
-			div.style.position = 'absolute';
-			div.style.top = e.pageY + 'px';
-			div.style.left = e.pageX + 'px';
-			div.style.zIndex = "99"
-			div.innerHTML = hexColor
-			document.body.appendChild(div);
+			createLabel (e.pageY + 'px', e.pageX + 'px', hexColor)
 		}
 	});
 }
