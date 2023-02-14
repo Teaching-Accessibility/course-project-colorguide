@@ -7,7 +7,7 @@ function createLabel(top, left, content) {
     newLabel.style.top = top;
     newLabel.style.left = left;
     newLabel.style.zIndex = "99";
-    newLabel.style.background = "#EEEEEE";
+    newLabel.style.background = "#ffffff";
 	newLabel.style.cursor  = "pointer";
 
 	// newLabel.innerHTML = content;
