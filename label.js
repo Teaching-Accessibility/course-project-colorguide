@@ -32,6 +32,7 @@ function createLabel(top, left, content) {
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
 	closeButton.style.textAlign = "right";
+	closeButton.style.color = "#000000";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
         label.parentNode.removeChild(label);
@@ -47,5 +48,6 @@ function addContent (label, content) {
 	let textContent = document.createElement("p");
 	textContent.className = "colorlabel_child";
 	textContent.appendChild(document.createTextNode(content));
+	textContent.style.color = "#000000";
 	label.appendChild(textContent);
 }
