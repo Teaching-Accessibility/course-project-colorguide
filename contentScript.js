@@ -27,8 +27,46 @@ function captureCurrentPixel(e) {
 	});
 }
 
-function hexToColorName(hex){
-	//
+function colorNameTranslate(r,g,b){
+	let hsl = rgbToHsl(r,g,b);
+	let hue = hsl[0];
+	let saturation = hsl[1];
+	let lightness = hsl[2];
+	console.log(hue);
+	console.log(saturation);
+	console.log(lightness);
+	if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
+		console.log("red");
+	}
+	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
+		console.log("orange");
+	} 
+	else if ((45 <= hue && hue <= 74) && 10 <= saturation){
+		console.log("yellow");
+	}
+	else if ((75 <= hue && hue <= 144) && 10 <= saturation){
+		console.log("Green");
+	}
+	if ((145 <= hue && hue <= 199) && 10 <= saturation){
+			console.log("teal");
+	}
+	else if ((200 <= hue && hue <= 254) && 10 <= saturation){
+		console.log("blue");
+	}
+	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
+		console.log("purple");
+	}
+	else if ((290 <= hue && hue <= 344) && 10 <= saturation){
+		console.log("pink");
+	}
+
+
+
+{
+
+	}
+
+
 }
 
 function getColor(x, y) {
@@ -36,14 +74,15 @@ function getColor(x, y) {
 	let red = pixel[0];
 	let green = pixel[1];
 	let blue = pixel[2];
-	let hex = rgbToHsl(red, green, blue)
+	let hex = rgbToHex(red, green, blue);
+	colorNameTranslate(red, green, blue);
 
 	// To-Do: turn hex into color name
-	console.log("Hex: ", hex)
-	console.log("ColorName: ", hexToColorName(hex));
+	console.log("Hex: ", hex);
+	//console.log("ColorName: ", hexToColorName(hex));
 
 	// return color name here instead of hex
-	return hex
+	return hex;
 }
 
 function rgbToHex(r, g, b) {
@@ -106,7 +145,8 @@ function rgbToHsl(r, g, b) {
   s = +(s * 100).toFixed(1);
   l = +(l * 100).toFixed(1);
 
-  return "hsl(" + h + "," + s + "%," + l + "%)";
+  // return "hsl(" + h + "," + s + "%," + l + "%)";
+	return [h,s,l]
 }
 
 
