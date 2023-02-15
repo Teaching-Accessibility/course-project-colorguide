@@ -42,9 +42,11 @@ function colorNameTranslate(r,g,b){
 	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
 		console.log("red");
 		return "Red";
-	}
-		else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
-		console.log("white");
+	} else if (((0 <=hue && hue <=100) && (0 <= saturation && saturation <= 10)) &&  (11 <= lightness <= 89)){
+	console.log("Grey");
+				return "Grey";
+	} else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
+				console.log("white");
 				return "White";
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
@@ -70,12 +72,11 @@ function colorNameTranslate(r,g,b){
 	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
 		console.log("purple");
 				return "Purple";
+	} else if ((0 <=hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
+			console.log("black");
+				return "Black";
 	} 
-	// black
-	// 0 <= Hue <= 100
-	// 75 <= Saturation <= 100, 0 <= Lightness <= 5
-	// 0 <= Saturation <= 74, 0 <= Lightness <= 10
-	
+
 
 // 	Gray: (Gray the color not the prefix)
 // 0 <= Hue <= 100
@@ -92,7 +93,7 @@ function colorNameTranslate(r,g,b){
 // 10 <= Saturation <= 49 
 // Any lightness that doesn’t qualify it as black or white
 
-	return "Color unknown"
+	return "Unknown"
 
 
 }
