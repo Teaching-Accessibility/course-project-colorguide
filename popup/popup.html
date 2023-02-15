@@ -5,9 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ColorGuide</title>
+      <style>
+/* make sure that adding text to info section does not alter viewport size. */
+#infoSection {
+    width: 150px;
+    height: 80px;
+    overflow: scroll;
+}    
+    </style>
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
+  <h1>ColorGuide Online Shopping Assistant</h1>
   <button id="start-button" class = "button" >Open the eyedropper</button> <span id="result"></span>
   <p>Click on an area to get the color name of the pixel</p>
   <p>Click on the x on each label to delete</p>

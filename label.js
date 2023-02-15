@@ -5,6 +5,7 @@ function createLabel(top, left, content) {
     
     newLabel.style.position = 'absolute';
     newLabel.style.top = top;
+		//newLabel.style.textAlign = "center";
     newLabel.style.left = left;
     newLabel.style.zIndex = "99";
     newLabel.style.background = "#ffffff";
@@ -16,8 +17,9 @@ function createLabel(top, left, content) {
     count ++;
     // newLabel.style.height = "50%";
     // newLabel.style.width = "180px";
-
+				 addMinimizeButton(newLabel);
     addCloseButton(newLabel);
+
 	addContent(newLabel, content);
 
 
@@ -31,7 +33,9 @@ function createLabel(top, left, content) {
 
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
-	closeButton.style.textAlign = "right";
+	// closeButton.style.textAlign = "right";
+	closeButton.style.display ="inline-flex";
+	closeButton.style.float = "right";
 	closeButton.style.color = "#000000";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
@@ -43,6 +47,25 @@ function addCloseButton(label) {
 
 	label.appendChild(closeButton);
 }
+
+function addMinimizeButton(label) {
+	let closeButton = document.createElement("p");
+	//closeButton.style.textAlign = "left";
+	closeButton.style.float = "left";
+	closeButton.style.display ="inline-flex";
+	
+	closeButton.style.color = "#000000";
+	closeButton.className = "colorlabel_child";
+	closeButton.onclick = () => {
+        // minimize functionality here
+    };
+
+	let closeSymbol = document.createTextNode("-");
+	closeButton.appendChild(closeSymbol);
+
+	label.appendChild(closeButton);
+}
+
 
 function addContent (label, content) {
 	let textContent = document.createElement("p");
