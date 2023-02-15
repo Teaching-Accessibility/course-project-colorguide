@@ -33,7 +33,6 @@ function createLabel(top, left, content) {
 
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
-	// closeButton.style.textAlign = "right";
 	closeButton.style.display ="inline-flex";
 	closeButton.style.float = "right";
 	closeButton.style.color = "#000000";
@@ -50,7 +49,6 @@ function addCloseButton(label) {
 
 function addMinimizeButton(label) {
 	let closeButton = document.createElement("p");
-	//closeButton.style.textAlign = "left";
 	closeButton.style.float = "left";
 	closeButton.style.display ="inline-flex";
 	
