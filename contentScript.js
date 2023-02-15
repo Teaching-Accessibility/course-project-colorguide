@@ -27,6 +27,10 @@ function captureCurrentPixel(e) {
 	});
 }
 
+function hexToColorName(hex){
+	//
+}
+
 function getColor(x, y) {
 	let pixel = tempContext.getImageData(x, y, 1, 1).data;
 	let red = pixel[0];
@@ -36,7 +40,9 @@ function getColor(x, y) {
 
 	// To-Do: turn hex into color name
 	console.log("Hex: ", hex)
+	console.log("ColorName: ", hexToColorName(hex));
 
+	// return color name here instead of hex
 	return hex
 }
 

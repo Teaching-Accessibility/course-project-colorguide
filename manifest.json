@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ColorGuide Online Shopping Assistant",
-  "description": "Insert description here",
+  "description": "This browser extension allows users to see the simple color labels of products. Our goal is to eliminate confusion surrounding the colors of products when shopping online by providing simple color labels. ",
   "version": "1.0",
   "permissions": [
     "background",
@@ -43,6 +43,7 @@
     }
   },
   "action": {
+     "default_icon": "48.png",
     "default_popup": "popup/popup.html"
   }
 
