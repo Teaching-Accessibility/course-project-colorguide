@@ -72,7 +72,7 @@ function createMinimizedLabel (top, left, label) {
     newMinimizedLabel.style.top = top;
     newMinimizedLabel.style.left = left;
     newMinimizedLabel.style.zIndex = "99";
-    newMinimizedLabel.style.background = "red";
+    newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
 	newMinimizedLabel.style.display = "none"
 	newMinimizedLabel.className = "colorlabel_child";
@@ -80,7 +80,7 @@ function createMinimizedLabel (top, left, label) {
 	let maximizeButton = document.createElement("p");
 	maximizeButton.style.float = "left";
 	maximizeButton.style.display ="inline-flex";
-	maximizeButton.style.color = "#000000";
+	maximizeButton.style.color = "#ffffff";
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
 
