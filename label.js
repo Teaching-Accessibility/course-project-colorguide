@@ -48,20 +48,20 @@ function addCloseButton(label) {
 }
 
 function addMinimizeButton(label) {
-	let closeButton = document.createElement("p");
-	closeButton.style.float = "left";
-	closeButton.style.display ="inline-flex";
+	let minimizeButton = document.createElement("p");
+	 minimizeButton.style.float = "left";
+	 minimizeButton.style.display ="inline-flex";
 	
-	closeButton.style.color = "#000000";
-	closeButton.className = "colorlabel_child";
-	closeButton.onclick = () => {
+	 minimizeButton.style.color = "#000000";
+	 minimizeButton.className = "colorlabel_child";
+	 minimizeButton.onclick = () => {
         // minimize functionality here
     };
 
-	let closeSymbol = document.createTextNode("-");
-	closeButton.appendChild(closeSymbol);
+	let  minimizeSymbol = document.createTextNode("-");
+	 minimizeButton.appendChild( minimizeSymbol);
 
-	label.appendChild(closeButton);
+	label.appendChild( minimizeButton);
 }
 
 
