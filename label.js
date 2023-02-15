@@ -8,19 +8,17 @@ function createLabel(top, left, content) {
     newLabel.style.left = left;
     newLabel.style.zIndex = "99";
     newLabel.style.background = "#ffffff";
-	newLabel.style.cursor  = "pointer";
-	newLabel.style.display = "block"
-
+		newLabel.style.cursor  = "pointer";
+		newLabel.style.display = "block"
     newLabel.id = "ColorLabel" + count;
-	newLabel.className = "colorlabel";
+		newLabel.className = "colorlabel";
     count ++;
 
 
 	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
 
-
 	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
-    addCloseButton(newLabel);
+  addCloseButton(newLabel);
 	addContent(newLabel, content);
 
 	document.body.appendChild(newLabel);
@@ -51,7 +49,7 @@ function addMinimizeButton(label, func) {
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func
 
-	let  minimizeSymbol = document.createTextNode("-");
+	let minimizeSymbol = document.createTextNode("-");
 	minimizeButton.appendChild( minimizeSymbol);
 
 	label.appendChild( minimizeButton);
@@ -69,10 +67,10 @@ function addContent (label, content) {
 function createMinimizedLabel (top, left, label) {
 	let newMinimizedLabel = document.createElement('div');
 	newMinimizedLabel.style.position = 'absolute';
-    newMinimizedLabel.style.top = top;
-    newMinimizedLabel.style.left = left;
-    newMinimizedLabel.style.zIndex = "99";
-    newMinimizedLabel.style.background = "#000000";
+  newMinimizedLabel.style.top = top;
+  newMinimizedLabel.style.left = left;
+  newMinimizedLabel.style.zIndex = "99";
+  newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
 	newMinimizedLabel.style.display = "none"
 	newMinimizedLabel.className = "colorlabel_child";

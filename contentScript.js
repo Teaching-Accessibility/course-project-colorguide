@@ -14,8 +14,8 @@ function captureCurrentPixel(e) {
 		let img = new Image();
 		img.src = currentScreen.imgSrc;
 		img.onload = function() {
-			tempCanvas.width = img.naturalWidth;
-			tempCanvas.height = img.naturalHeight;
+		tempCanvas.width = img.naturalWidth;
+		tempCanvas.height = img.naturalHeight;
 
 			tempContext.drawImage(img, 0, 0);
             tempContext.setAtt

@@ -16,10 +16,16 @@
   <link rel="stylesheet" href="popup.css" />
 </head>
 <body>
-  <h1>ColorGuide Online Shopping Assistant</h1>
+  <h2>ColorGuide Online Shopping Assistant</h2>
   <button id="start-button" class = "button" >Open the eyedropper</button> <span id="result"></span>
-  <p>Click on an area to get the color name of the pixel</p>
-  <p>Click on the x on each label to delete</p>
+  <div class="container">
+  <ul class = "instructions">
+  <li>Click on an area to get the color name of the pixel</li>
+  <li>Click on the <b>x</b> on each label to delete</li>
+  <li>Click on the <b>-</b> button to minimize, <b>+</b> to expand again</li>
+  <li>Press <b>Ctrl+Q or Command+Q(Mac)</b> to stop and start the tool</li>
+  </ul>
+  </div>
   <script src="./popup.js" defer></script>
 </body>
 </html>
