@@ -35,9 +35,17 @@ function colorNameTranslate(r,g,b){
 	console.log(hue);
 	console.log(saturation);
 	console.log(lightness);
-	if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
+	if ((290 <= hue && hue <= 344) && 10 <= saturation){
+		console.log("pink");
+				return "Pink";
+	}
+	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
 		console.log("red");
 		return "Red";
+	}
+		else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
+		console.log("white");
+				return "White";
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		console.log("orange");
@@ -62,23 +70,17 @@ function colorNameTranslate(r,g,b){
 	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
 		console.log("purple");
 				return "Purple";
-	}
-	else if ((290 <= hue && hue <= 344) && 10 <= saturation){
-		console.log("pink");
-				return "Pink";
-	}
-//	 0 <= Hue <= 100
-// 75 <= Saturation <= 100, 0 <= Lightness <= 5
-// 0 <= Saturation <= 74, 0 <= Lightness <= 10
-
-
+	} 
+	// black
+	// 0 <= Hue <= 100
+	// 75 <= Saturation <= 100, 0 <= Lightness <= 5
+	// 0 <= Saturation <= 74, 0 <= Lightness <= 10
 	
-// Brown:
 
-// “Light” prefix: - Lightness boundaries change with saturation
+// 	Gray: (Gray the color not the prefix)
 // 0 <= Hue <= 100
-// 75 <= Saturation <= 100, 75 <= Lightness <= 95 (more than 95 is white)
-// 0 <= Saturation <= 74, 60 <= Lightness <= 90 (more than 90 is white)
+// 0 <= Saturation <= 10
+// Any lightness that doesn’t qualify it as black or white
 
 // “Dark” prefix: - Lightness boundaries change with saturation
 // 0 <= Hue <= 100
@@ -90,27 +92,7 @@ function colorNameTranslate(r,g,b){
 // 10 <= Saturation <= 49 
 // Any lightness that doesn’t qualify it as black or white
 
-// White: - Lightness boundaries change with saturation
-// 0 <= Hue <= 100
-// 75 <= Saturation <= 100, 95 <= Lightness <= 100
-// 0 <= Saturation <= 74, 90 <= Lightness <= 100
-
-// Black: - Lightness boundaries change with saturation
-// 0 <= Hue <= 100
-// 75 <= Saturation <= 100, 0 <= Lightness <= 5
-// 0 <= Saturation <= 74, 0 <= Lightness <= 10
-
-// Gray: (Gray the color not the prefix)
-// 0 <= Hue <= 100
-// 0 <= Saturation <= 10
-// Any lightness that doesn’t qualify it as black or white
-
-
-
-
-{
-
-	}
+	return "Color unknown"
 
 
 }
