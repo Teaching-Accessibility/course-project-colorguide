@@ -20,9 +20,9 @@ function captureCurrentPixel(e) {
 			tempContext.drawImage(img, 0, 0);
             tempContext.setAtt
 			// Use pixel ratio to make sure it works on screens with very high resolutions like Retina
-			hexColor = getColor(e.clientX * window.devicePixelRatio, e.clientY * window.devicePixelRatio);
+			let colorName = getColor(e.clientX * window.devicePixelRatio, e.clientY * window.devicePixelRatio);
 
-			createLabel (e.pageY + 'px', e.pageX + 'px', hexColor)
+			createLabel (e.pageY + 'px', e.pageX + 'px', 	colorName )
 		}
 	});
 }
@@ -37,28 +37,74 @@ function colorNameTranslate(r,g,b){
 	console.log(lightness);
 	if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
 		console.log("red");
+		return "Red";
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		console.log("orange");
+		return "Orange";
 	} 
 	else if ((45 <= hue && hue <= 74) && 10 <= saturation){
 		console.log("yellow");
+				return "Yellow";
 	}
 	else if ((75 <= hue && hue <= 144) && 10 <= saturation){
 		console.log("Green");
+				return "Green";
 	}
 	if ((145 <= hue && hue <= 199) && 10 <= saturation){
 			console.log("teal");
+					return "Teal";
 	}
 	else if ((200 <= hue && hue <= 254) && 10 <= saturation){
 		console.log("blue");
+				return "Blue";
 	}
 	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
 		console.log("purple");
+				return "Purple";
 	}
 	else if ((290 <= hue && hue <= 344) && 10 <= saturation){
 		console.log("pink");
+				return "Pink";
 	}
+//	 0 <= Hue <= 100
+// 75 <= Saturation <= 100, 0 <= Lightness <= 5
+// 0 <= Saturation <= 74, 0 <= Lightness <= 10
+
+
+	
+// Brown:
+
+// “Light” prefix: - Lightness boundaries change with saturation
+// 0 <= Hue <= 100
+// 75 <= Saturation <= 100, 75 <= Lightness <= 95 (more than 95 is white)
+// 0 <= Saturation <= 74, 60 <= Lightness <= 90 (more than 90 is white)
+
+// “Dark” prefix: - Lightness boundaries change with saturation
+// 0 <= Hue <= 100
+// 75 <= Saturation <= 100, 5 <= Lightness <= 25 (less than 5 is black)
+// 0 <= Saturation <= 74, 10 <= Lightness <= 40 (less than 10 is black)
+
+// “Gray” prefix: Gray prefix indicates a lack of saturation
+// 0 <= Hue <= 100
+// 10 <= Saturation <= 49 
+// Any lightness that doesn’t qualify it as black or white
+
+// White: - Lightness boundaries change with saturation
+// 0 <= Hue <= 100
+// 75 <= Saturation <= 100, 95 <= Lightness <= 100
+// 0 <= Saturation <= 74, 90 <= Lightness <= 100
+
+// Black: - Lightness boundaries change with saturation
+// 0 <= Hue <= 100
+// 75 <= Saturation <= 100, 0 <= Lightness <= 5
+// 0 <= Saturation <= 74, 0 <= Lightness <= 10
+
+// Gray: (Gray the color not the prefix)
+// 0 <= Hue <= 100
+// 0 <= Saturation <= 10
+// Any lightness that doesn’t qualify it as black or white
+
 
 
 
@@ -75,14 +121,14 @@ function getColor(x, y) {
 	let green = pixel[1];
 	let blue = pixel[2];
 	let hex = rgbToHex(red, green, blue);
-	colorNameTranslate(red, green, blue);
+	let name = colorNameTranslate(red, green, blue);
 
 	// To-Do: turn hex into color name
 	console.log("Hex: ", hex);
 	//console.log("ColorName: ", hexToColorName(hex));
 
 	// return color name here instead of hex
-	return hex;
+	return name;
 }
 
 function rgbToHex(r, g, b) {
