@@ -1,3 +1,4 @@
+let statusLabel = createStatusLabel ();
 let count = 0
 
 function createLabel(top, left, content) {
@@ -32,6 +33,7 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
+		label.style.display = "none"
         label.parentNode.removeChild(label);
     };
 
@@ -54,7 +56,6 @@ function addMinimizeButton(label, func) {
 
 	label.appendChild( minimizeButton);
 }
-
 
 function addContent (label, content) {
 	let textContent = document.createElement("p");
@@ -106,3 +107,36 @@ function toggleDiv(div1, div2)
 		div2.style.display = 'block'
 	}
 } 
+
+function createStatusLabel () {
+	let newStatusLabel = document.createElement('div'); 
+
+	newStatusLabel.style.background = "green";
+	newStatusLabel.style.height = "30px";
+	newStatusLabel.style.width = "200px";
+	newStatusLabel.style.position = "fixed";
+	newStatusLabel.style.top = "0px";
+	newStatusLabel.style.right = "0px";
+	newStatusLabel.style.zIndex = "99";
+	newStatusLabel.style.display = "none";
+	newStatusLabel.style.cursor  = "pointer";
+
+	newStatusLabel.className = "colorlabel";
+
+	addCloseButton (newStatusLabel)
+	addContent (newStatusLabel, "Tool Turned On")
+
+	return newStatusLabel
+}
+
+function addStatusLabel () {
+	statusLabel.style.display = "block";
+	document.body.appendChild(statusLabel);
+}
+
+function removeStatusLabel () {
+	if (statusLabel.style.display === "none") return;
+
+	statusLabel.style.display = "none";
+	statusLabel.parentNode.removeChild(statusLabel);
+}

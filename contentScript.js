@@ -250,11 +250,12 @@ function rgbToHsl(r, g, b) {
 }
 
 
+
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
 		children[i].style['pointer-events'] = 'none';
 	}
-
+	addStatusLabel ();
 	document.addEventListener("click", captureCurrentPixel, false);
 }
 
@@ -263,6 +264,7 @@ const toggleOff = () => {
 		children[i].style['pointer-events'] = 'auto';
 	}
 	document.body.style.cursor = "default";
+	removeStatusLabel ();
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
