@@ -73,6 +73,14 @@ function colorNameTranslate(r,g,b){
 	} else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
 				console.log("white");
 				return "White";
+	}  else if ((0 <=hue && hue <= 38)  && (31 <=saturation && saturation <= 100) && (3 <= lightness && lightness <= 20)){
+		if (dark){
+			return "Dark Brown";
+		}
+		if (light){
+			return "Light Brown";
+		}
+		return "Brown";
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		console.log("orange");
@@ -136,7 +144,7 @@ function colorNameTranslate(r,g,b){
 	} else if ((0 <=hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
 			console.log("black");
 				return "Black";
-	} 
+	}
 	
 
 // “Gray” prefix: Gray prefix indicates a lack of saturation
@@ -233,7 +241,7 @@ const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
 		children[i].style['pointer-events'] = 'none';
 	}
-	document.body.style.cursor = "crosshair";
+
 	document.addEventListener("click", captureCurrentPixel, false);
 }
 
