@@ -160,30 +160,33 @@ function colorNameTranslate(r,g,b){
 }
 
 function getColor(x, y) {
-	let pixel = tempContext.getImageData(x, y, 1, 1).data;
-	let red = pixel[0];
-	let green = pixel[1];
-	let blue = pixel[2];
-	let hex = rgbToHex(red, green, blue);
-	console.log("Hex: ", hex);
+	let listOfNames = []
+	let pixelList = tempContext.getImageData(x -2, y -2, 5, 5).data;
+	// console.log (pixelList)
 
+	for (i = 0; i < pixelList.length; i += 4) {
+		let red = pixelList[i];
+		let green = pixelList[i + 1];
+		let blue = pixelList[i + 2];
+		
+		// // NTC translation
+		// let hex = rgbToHex(red, green, blue);
+		// let n_match = ntc.name(hex);
+		// let n_shade_name = n_match[3];        // Text string: Shade name
+		// listOfNames.push(n_shade_name)
 
-	 // COLOR NAME & SHADE
-	let n_match = ntc.name(hex);
-	let n_rgb = n_match[0];                     // RGB value of closest match
-	let n_name = n_match[1];                  // Text string: Color name
-	let n_shade_rgb = n_match[2];           // RGB value of the shade 
-	let n_shade_name = n_match[3];        // Text string: Shade name
+		// Orgiginal translation
+		n_shade_name = colorNameTranslate(red, green, blue);
+		listOfNames.push(n_shade_name)
+	}
+	console.log (listOfNames)
+	let mostCommon = listOfNames.sort((a,b) =>
+		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length
+	).pop();
 
-	console.log ("************")
-	console.log ("Closest match RGB: ", n_rgb)
-	console.log ("Closest match name: ", n_name)
-	console.log ("Shade RGB: ", n_shade_rgb)
-	console.log ("Shade Name: ",n_shade_name)
-	console.log ("************")
+	console.log("Most common: ", mostCommon )
 
-
-	return n_shade_name;
+	return mostCommon;
 }
 
 function rgbToHex(r, g, b) {
