@@ -21,9 +21,10 @@
 
 ## Document installation instructions
 
-At chrome://extensions, switch to developer mode (toggle in corner)
+In your terminal, execute
+`git clone https://github.com/Teaching-Accessibility/course-project-colorguide.git`
 
-git clone repo
+At chrome://extensions, switch to developer mode (toggle button in right hand corner)
 
 Press Load Unpacked button and select folder where you cloned the repo
 
