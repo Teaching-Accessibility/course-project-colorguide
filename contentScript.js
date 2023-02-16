@@ -3,8 +3,8 @@ let tempCanvas = document.createElement('canvas');
 let tempContext = tempCanvas.getContext('2d', { willReadFrequently: true });
 
 function captureCurrentPixel(e) {
-	console.log (e.target)
-	let hexColor;
+	// console.log (e.target)
+	// let hexColor;
 	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child") {
 		return;
 	}
@@ -165,11 +165,25 @@ function getColor(x, y) {
 	let green = pixel[1];
 	let blue = pixel[2];
 	let hex = rgbToHex(red, green, blue);
-	let name = colorNameTranslate(red, green, blue);
-
 	console.log("Hex: ", hex);
 
-	return name;
+
+	 // COLOR NAME & SHADE
+	let n_match = ntc.name(hex);
+	let n_rgb = n_match[0];                     // RGB value of closest match
+	let n_name = n_match[1];                  // Text string: Color name
+	let n_shade_rgb = n_match[2];           // RGB value of the shade 
+	let n_shade_name = n_match[3];        // Text string: Shade name
+
+	console.log ("************")
+	console.log ("Closest match RGB: ", n_rgb)
+	console.log ("Closest match name: ", n_name)
+	console.log ("Shade RGB: ", n_shade_rgb)
+	console.log ("Shade Name: ",n_shade_name)
+	console.log ("************")
+
+
+	return n_shade_name;
 }
 
 function rgbToHex(r, g, b) {
