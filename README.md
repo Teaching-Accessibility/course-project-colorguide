@@ -86,6 +86,7 @@ Three Flashes or Below Threshold?
 Three Flashes?
 
 
+
 <img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
 
 Screen 2: Program in Use
@@ -97,6 +98,7 @@ There is no simulated back end.
 Design guidelines followed: 
 
 
+
 <img width="308" alt="Screenshot 2023-02-15 204753" src="https://user-images.githubusercontent.com/71570112/219271431-05cacb9b-0206-49b6-a339-8f2445d85443.png">
 Screen 3: Color Labels
 
@@ -105,6 +107,7 @@ Color labels can be placed anywhere in the Chrome window and include the color n
 There is no simulated back end.
 
 Design guidelines followed: 
+
 
 
 <img width="325" alt="Screenshot 2023-02-15 204818" src="https://user-images.githubusercontent.com/71570112/219271421-bdd0db35-1694-43a0-9976-716d0d41a790.png">
