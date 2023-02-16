@@ -159,11 +159,8 @@ function getColor(x, y) {
 	let hex = rgbToHex(red, green, blue);
 	let name = colorNameTranslate(red, green, blue);
 
-	// To-Do: turn hex into color name
 	console.log("Hex: ", hex);
-	//console.log("ColorName: ", hexToColorName(hex));
 
-	// return color name here instead of hex
 	return name;
 }
 
@@ -236,6 +233,7 @@ const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
 		children[i].style['pointer-events'] = 'none';
 	}
+	document.body.style.cursor = "crosshair";
 	document.addEventListener("click", captureCurrentPixel, false);
 }
 
@@ -243,6 +241,7 @@ const toggleOff = () => {
 	for (let i = 0; i < children.length; i++) {
 		children[i].style['pointer-events'] = 'auto';
 	}
+	document.body.style.cursor = "default";
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
