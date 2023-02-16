@@ -1,21 +1,39 @@
 # ColorGuide Online Shopping Assistant
+##### Table of Contents  
+1. [Group Members](#groupMembers)  
+2. [R1](#r1)  
+   - [Individual Contributions](#indivCon)
+   - [Implemented Features](#implFeat) 
+   - [Installations Instructions](#install) 
+   - [UI Documentation](#UIDoc) 
+ 
+<a name="groupMembers"></a>
+## Group Members
 
-## List of names of the group members. For each team member, list the member's individual contributions to the project
+- ### Kelley 
+
+- ### Tin
 
 ### Kelley 
 Create HSL code to color name library including red, orange, yellow, green, teal, blue, purple, pink, black, gray, and white color names as well as light-, dark-, and gray- prefixes. 
 Explanation of applied design guidelines.
+- ### Natalie 
 
-### Tin
+<a name="r1"></a>
+# R1
 
-Tin worked on the code to create, delete and minimize the tags.
+<a name="indivCon"></a>
+## Individual Contributions
 
-### Natalie 
+- ### Kelley 
 
-Natalie implemented the color dictionary, popup, and worked on coding styling.
+- ### Tin
 
+- ### Natalie 
 
-## Explain the implemented features
+<a name="implFeat"></a>
+## Implemented Features
+
 - ### Popup screen with instructions: 
 This is a popup screen that explains to the user how to use the extension.
 
@@ -30,7 +48,8 @@ There can be many tags and tags can be minimized/maximized.
 - ### Can exit tool and continue browsing, with tags persisting:
 A user can close the eyedropper color tagger and keep all of the tags that exist on the page.
 
-## Document installation instructions
+<a name="install"></a>
+## Installation Instructions
 
 1. In your terminal, execute
 ```
@@ -47,8 +66,8 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 - [How To Install The Unpacked Extension In Chrome](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/#:~:text=Goto%20Chrome%20Settings%20using%20three,Then%20Select%20Extensions.&text=Click%20on%20Load%20Unpacked%20and,which%20the%20manifest%20file%20exists) 
 - If the extension does not work, restart Chrome by typing "chrome://restart" into the address bar
 
-
-## The UI documentation 
+<a name="UIDoc"></a>
+## UI Documentation 
 
  Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
 
