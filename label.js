@@ -62,7 +62,7 @@ function addContent (label, content) {
 	textContent.appendChild(document.createTextNode(content));
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
-	textContent.style.padding = "10px";
+	textContent.style.padding = "10px 10px 0px 10px "; 
 
 	label.appendChild(textContent);
 }
