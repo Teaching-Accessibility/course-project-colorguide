@@ -3,7 +3,6 @@
 ## List of names of the group members. For each team member, list the member's individual contributions to the project
 
 ### Kelley 
-<img width="209" alt="Screenshot 2023-02-15 205006" src="https://user-images.githubusercontent.com/71570112/219271541-62bba514-6de7-4f62-bfcf-469708b83c8a.png">
 
 ### Tin
 
