@@ -10,21 +10,26 @@
 
 
 ## Explain the implemented features
-- ### Popup screen with instructions:
+- ### Popup screen with instructions: 
+This is a popup screen that explains to the user how to use the extension.
 
 - ### Eyedropper that can tag pixels:
+Multiple tags that overlay the screen can tag pixel colors to get translation.
 
 - ### Tags display a color dictionary translation:
+Each tag displays the basic color name value of the pixel selected.
 
 - ### Multiple tags on a page can be minimized/maximized:
+There can be many tags and tags can be minimized/maximized.
 - ### Can exit tool and continue browsing, with tags persisting:
+A user can close the eyedropper color tagger and keep all of the tags that exist on the page.
 
 ## Document installation instructions
 
 In your terminal, execute
 `git clone https://github.com/Teaching-Accessibility/course-project-colorguide.git`
 
-At chrome://extensions, switch to developer mode (toggle button in right hand corner)
+In Chrome, go to this link: chrome://extensions, and switch to developer mode (toggle button in right hand corner)
 
 Press Load Unpacked button and select folder where you cloned the repo
 
