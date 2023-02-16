@@ -48,8 +48,7 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 <img width="181" alt="Screenshot 2023-02-16 103941" src="https://user-images.githubusercontent.com/71570112/219457812-4e3561bc-5835-4f7f-a62c-4f1ca808135a.png">
 
-<img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
-
+<img width="947" alt="Screenshot 2023-02-16 134800" src="https://user-images.githubusercontent.com/71570112/219494632-a2b47547-00af-4350-9995-8c7339ea8123.png">
 
 
 <img width="929" alt="Screenshot 2023-02-15 204526" src="https://user-images.githubusercontent.com/71570112/219271448-0c3f8123-4721-43cb-b803-3baeb07e6380.png">
