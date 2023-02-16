@@ -35,7 +35,7 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 3. Press `Load Unpacked` button and select the cloned repo folder
 
-4. Press `Command Q` to run the extension or select it under the puzzle piece icon on the taskbar of Chrome.
+4. On Mac, `Command Q` to run the extension. On Windows,  `Ctrl Q` to run. Or, select it under the puzzle piece icon on the taskbar of Chrome.
 
 #### Helpful Links and Tips:
 - [How To Install The Unpacked Extension In Chrome](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/#:~:text=Goto%20Chrome%20Settings%20using%20three,Then%20Select%20Extensions.&text=Click%20on%20Load%20Unpacked%20and,which%20the%20manifest%20file%20exists) 
@@ -43,6 +43,9 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 
 ## The UI documentation 
+
+ Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
+ 
 <img width="209" alt="Screenshot 2023-02-15 205006" src="https://user-images.githubusercontent.com/71570112/219271558-53743e2d-f8ac-4ce5-b840-a89683253d38.png">
 
 
