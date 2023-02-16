@@ -14,9 +14,6 @@
 
 - ### Tin
 
-### Kelley 
-Create HSL code to color name library including red, orange, yellow, green, teal, blue, purple, pink, black, gray, and white color names as well as light-, dark-, and gray- prefixes. 
-Explanation of applied design guidelines.
 - ### Natalie 
 
 <a name="r1"></a>
@@ -26,7 +23,7 @@ Explanation of applied design guidelines.
 ## Individual Contributions
 
 - ### Kelley 
-Kelley defined the color dictionary we would implement for translating rgb values to color names. She also wrote up UI documentation.
+Kelley defined the color dictionary we would implement for translating HSL values to color names. She also wrote up UI documentation.
 
 - ### Tin
 Tin worked on the code to create, delete and minimize the tags.
@@ -75,35 +72,53 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
  Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
 
 <img width="181" alt="Screenshot 2023-02-16 103941" src="https://user-images.githubusercontent.com/71570112/219457812-4e3561bc-5835-4f7f-a62c-4f1ca808135a.png">
+
 Screen 1: Home Page
+
 This is the window that includes the instructions for how to use the program, as well as has a button to start it. 
+
 There is no simulated back end.
+
 Design guidelines followed: 
 WCAG 1.4.6 Contrast (Enchanced)
 No Timing?
 Three Flashes or Below Threshold?
 Three Flashes?
 
+
+
 <img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
+
 Screen 2: Program in Use
+
 This is a combined view of five placed color labels and the home page. 
+
 There is no simulated back end.
+
 Design guidelines followed: 
-<img width="947" alt="Screenshot 2023-02-16 134800" src="https://user-images.githubusercontent.com/71570112/219494632-a2b47547-00af-4350-9995-8c7339ea8123.png">
 
 
-<img width="929" alt="Screenshot 2023-02-15 204526" src="https://user-images.githubusercontent.com/71570112/219271448-0c3f8123-4721-43cb-b803-3baeb07e6380.png">
 
 <img width="308" alt="Screenshot 2023-02-15 204753" src="https://user-images.githubusercontent.com/71570112/219271431-05cacb9b-0206-49b6-a339-8f2445d85443.png">
 Screen 3: Color Labels
+
 Color labels can be placed anywhere in the Chrome window and include the color name, a minimize button in the upper left, and a close button in the upper right. The upper left corner of the label is the location where the user clicked for the color label.
+
 There is no simulated back end.
+
 Design guidelines followed: 
 
+
+
 <img width="325" alt="Screenshot 2023-02-15 204818" src="https://user-images.githubusercontent.com/71570112/219271421-bdd0db35-1694-43a0-9976-716d0d41a790.png">
+
 Screen 4: Minimized Color Labels
+
 When a color label is minimized, it becomes only a white "+" on a black background over the selected spot. If the "+" is selected, the label will maximize and return to the state it was in before being minimized.
+
 There is no simulated back end.
+
 Design guidelines followed: 
+
 
  
