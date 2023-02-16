@@ -33,11 +33,13 @@ function colorNameTranslate(r,g,b){
 	let saturation = hsl[1];
 	let lightness = hsl[2];
 	let dark = false;
-	let light = true;
+	let light = false;
 	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
 		console.log("dark");
+		dark = true;
 	} else if (((75 <= saturation && saturation <= 100) && (75 <= lightness && lightness <= 95) ) || ((0 <= saturation && saturation <= 74) && (60 <= lightness && lightness <= 90) )){
 		console.log("light");
+		light = true;
 	}
 
 	if ((290 <= hue && hue <= 344) && 10 <= saturation){
@@ -56,7 +58,7 @@ function colorNameTranslate(r,g,b){
 			return "Dark Red";
 		}
 		if (light){
-			return "Pink";
+			return "Light Red";
 		}
 		return "Red";
 	} else if (((0 <=hue && hue <=100) && (0 <= saturation && saturation <= 10)) &&  (11 <= lightness <= 89)){
