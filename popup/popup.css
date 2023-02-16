@@ -26,6 +26,14 @@ p {
   font-size: 14px;
 }
 
+.instructions{
+  padding: 0px 25px 0px 25px;
+}
+
+li{
+ margin: 5px 0;
+}
+
 
 /* .start-button {
   color: #000000;
