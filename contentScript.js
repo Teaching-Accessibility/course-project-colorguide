@@ -32,16 +32,41 @@ function colorNameTranslate(r,g,b){
 	let hue = hsl[0];
 	let saturation = hsl[1];
 	let lightness = hsl[2];
-	
+	let dark = false;
+	let light = true;
+	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
+		console.log("dark");
+	} else if (((75 <= saturation && saturation <= 100) && (75 <= lightness && lightness <= 95) ) || ((0 <= saturation && saturation <= 74) && (60 <= lightness && lightness <= 90) )){
+		console.log("light");
+	}
+
 	if ((290 <= hue && hue <= 344) && 10 <= saturation){
 		console.log("pink");
+		if (dark){
+			return "Dark Pink";
+		}
+		if (light){
+			return "Light Pink";
+		}
 				return "Pink";
 	}
 	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
 		console.log("red");
+		if (dark){
+			return "Dark Red";
+		}
+		if (light){
+			return "Pink";
+		}
 		return "Red";
 	} else if (((0 <=hue && hue <=100) && (0 <= saturation && saturation <= 10)) &&  (11 <= lightness <= 89)){
 	console.log("Grey");
+	if (dark){
+			return "Dark Grey";
+		}
+		if (light){
+			return "Light Grey";
+		}
 				return "Grey";
 	} else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
 				console.log("white");
@@ -49,39 +74,70 @@ function colorNameTranslate(r,g,b){
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		console.log("orange");
+		if (dark){
+			return "Dark Orange";
+		}
+		if (light){
+			return "Light Orange";
+		}
 		return "Orange";
 	} 
 	else if ((45 <= hue && hue <= 74) && 10 <= saturation){
 		console.log("yellow");
+		if (dark){
+			return "Dark Yellow";
+		}
+		if (light){
+			return "Light Yellow";
+		}
 				return "Yellow";
 	}
 	else if ((75 <= hue && hue <= 144) && 10 <= saturation){
 		console.log("Green");
+		if (dark){
+			return "Dark Green";
+		}
+		if (light){
+			return "Light Green";
+		}
 				return "Green";
 	}
 	if ((145 <= hue && hue <= 199) && 10 <= saturation){
 			console.log("teal");
-					return "Teal";
+			if (dark){
+				return "Dark Teal";
+			}
+			if (light){
+				return "Light Teal";
+			}
+			return "Teal";
 	}
 	else if ((200 <= hue && hue <= 254) && 10 <= saturation){
 		console.log("blue");
+		if (dark){
+				return "Dark Blue";
+			}
+			if (light){
+				return "Light Blue";
+			}
 				return "Blue";
 	}
 	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
 		console.log("purple");
+		if (dark){
+				return "Dark Purple";
+			}
+			if (light){
+				return "Light Purple";
+			}
 				return "Purple";
 	} else if ((0 <=hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
 			console.log("black");
 				return "Black";
 	} 
+	
 
-
-// “Dark” prefix: - Lightness boundaries change with saturation
-// 0 <= Hue <= 100
-// 75 <= Saturation <= 100, 5 <= Lightness <= 25 (less than 5 is black)
-// 0 <= Saturation <= 74, 10 <= Lightness <= 40 (less than 10 is black)
-
-// “Gray” prefix: Gdray prefix indicates a lack of saturation
+// “Gray” prefix: Gray prefix indicates a lack of saturation
 // 0 <= Hue <= 100
 // 10 <= Saturation <= 49 
 // Any lightness that doesn’t qualify it as black or white
