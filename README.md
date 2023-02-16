@@ -26,10 +26,13 @@ Explanation of applied design guidelines.
 ## Individual Contributions
 
 - ### Kelley 
+Kelley defined the color dictionary we would implement for translating rgb values to color names. She also wrote up UI documentation.
 
 - ### Tin
+Tin worked on the code to create, delete and minimize the tags.
 
 - ### Natalie 
+Natalie implemented the color dictionary, popup, and worked on coding styling.
 
 <a name="implFeat"></a>
 ## Implemented Features
