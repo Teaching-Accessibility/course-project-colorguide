@@ -97,11 +97,6 @@ There is no simulated back end.
 Design guidelines followed: 
 
 
-<img width="947" alt="Screenshot 2023-02-16 134800" src="https://user-images.githubusercontent.com/71570112/219494632-a2b47547-00af-4350-9995-8c7339ea8123.png">
-
-
-<img width="929" alt="Screenshot 2023-02-15 204526" src="https://user-images.githubusercontent.com/71570112/219271448-0c3f8123-4721-43cb-b803-3baeb07e6380.png">
-
 <img width="308" alt="Screenshot 2023-02-15 204753" src="https://user-images.githubusercontent.com/71570112/219271431-05cacb9b-0206-49b6-a339-8f2445d85443.png">
 Screen 3: Color Labels
 
