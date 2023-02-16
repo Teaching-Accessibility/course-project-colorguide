@@ -32,9 +32,7 @@ function colorNameTranslate(r,g,b){
 	let hue = hsl[0];
 	let saturation = hsl[1];
 	let lightness = hsl[2];
-	console.log(hue);
-	console.log(saturation);
-	console.log(lightness);
+	
 	if ((290 <= hue && hue <= 344) && 10 <= saturation){
 		console.log("pink");
 				return "Pink";
@@ -78,21 +76,18 @@ function colorNameTranslate(r,g,b){
 	} 
 
 
-// 	Gray: (Gray the color not the prefix)
-// 0 <= Hue <= 100
-// 0 <= Saturation <= 10
-// Any lightness that doesn’t qualify it as black or white
-
 // “Dark” prefix: - Lightness boundaries change with saturation
 // 0 <= Hue <= 100
 // 75 <= Saturation <= 100, 5 <= Lightness <= 25 (less than 5 is black)
 // 0 <= Saturation <= 74, 10 <= Lightness <= 40 (less than 10 is black)
 
-// “Gray” prefix: Gray prefix indicates a lack of saturation
+// “Gray” prefix: Gdray prefix indicates a lack of saturation
 // 0 <= Hue <= 100
 // 10 <= Saturation <= 49 
 // Any lightness that doesn’t qualify it as black or white
-
+	console.log(hue);
+	console.log(saturation);
+	console.log(lightness);
 	return "Unknown"
 
 
