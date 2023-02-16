@@ -35,7 +35,7 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 3. Press `Load Unpacked` button and select the cloned repo folder
 
-4. Press `Command Q` to run the extension or select it under the puzzle piece icon on the taskbar of Chrome.
+4. On Mac, `Command Q` to run the extension. On Windows,  `Ctrl Q` to run. Or, select it under the puzzle piece icon on the taskbar of Chrome.
 
 #### Helpful Links and Tips:
 - [How To Install The Unpacked Extension In Chrome](https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/#:~:text=Goto%20Chrome%20Settings%20using%20three,Then%20Select%20Extensions.&text=Click%20on%20Load%20Unpacked%20and,which%20the%20manifest%20file%20exists) 
