@@ -61,7 +61,7 @@ function colorNameTranslate(r,g,b){
 			return "Light Red";
 		}
 		return "Red";
-	} else if (((0 <=hue && hue <=100) && (0 <= saturation && saturation <= 10)) &&  (11 <= lightness <= 89)){
+	} else if ((0 <= saturation && saturation <= 10) &&  (11 <= lightness <= 89)){
 	console.log("Grey");
 	if (dark){
 			return "Dark Grey";
