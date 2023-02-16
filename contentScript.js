@@ -85,7 +85,7 @@ function colorNameTranslate(r,g,b){
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		console.log("orange");
 		if (dark){
-			return "Dark Orange";
+			return "Brown";
 		}
 		if (light){
 			return "Light Orange";
