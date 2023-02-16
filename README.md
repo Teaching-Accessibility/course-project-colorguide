@@ -45,11 +45,12 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 ## The UI documentation 
 
  Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
- 
-<img width="209" alt="Screenshot 2023-02-15 205006" src="https://user-images.githubusercontent.com/71570112/219271558-53743e2d-f8ac-4ce5-b840-a89683253d38.png">
+
+<img width="181" alt="Screenshot 2023-02-16 103941" src="https://user-images.githubusercontent.com/71570112/219457812-4e3561bc-5835-4f7f-a62c-4f1ca808135a.png">
+
+<img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
 
 
-<img width="960" alt="Screenshot 2023-02-15 204601" src="https://user-images.githubusercontent.com/71570112/219271435-0c03fa06-0245-4821-961e-fcf8c84c963e.png">
 
 <img width="929" alt="Screenshot 2023-02-15 204526" src="https://user-images.githubusercontent.com/71570112/219271448-0c3f8123-4721-43cb-b803-3baeb07e6380.png">
 
