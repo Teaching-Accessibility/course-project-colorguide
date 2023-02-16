@@ -3,6 +3,7 @@
 ## List of names of the group members. For each team member, list the member's individual contributions to the project
 
 ### Kelley 
+<img width="209" alt="Screenshot 2023-02-15 205006" src="https://user-images.githubusercontent.com/71570112/219271541-62bba514-6de7-4f62-bfcf-469708b83c8a.png">
 
 ### Tin
 
@@ -38,7 +39,16 @@ Press Command Q to run the extension or select it under the puzzle piece icon on
 https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/#:~:text=Goto%20Chrome%20Settings%20using%20three,Then%20Select%20Extensions.&text=Click%20on%20Load%20Unpacked%20and,which%20the%20manifest%20file%20exists. 
 
 ## The UI documentation 
+<img width="209" alt="Screenshot 2023-02-15 205006" src="https://user-images.githubusercontent.com/71570112/219271558-53743e2d-f8ac-4ce5-b840-a89683253d38.png">
 
+
+<img width="960" alt="Screenshot 2023-02-15 204601" src="https://user-images.githubusercontent.com/71570112/219271435-0c03fa06-0245-4821-961e-fcf8c84c963e.png">
+
+<img width="929" alt="Screenshot 2023-02-15 204526" src="https://user-images.githubusercontent.com/71570112/219271448-0c3f8123-4721-43cb-b803-3baeb07e6380.png">
+
+<img width="308" alt="Screenshot 2023-02-15 204753" src="https://user-images.githubusercontent.com/71570112/219271431-05cacb9b-0206-49b6-a339-8f2445d85443.png">
+
+<img width="325" alt="Screenshot 2023-02-15 204818" src="https://user-images.githubusercontent.com/71570112/219271421-bdd0db35-1694-43a0-9976-716d0d41a790.png">
 
 
  
