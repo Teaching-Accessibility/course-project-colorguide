@@ -3,8 +3,8 @@ let tempCanvas = document.createElement('canvas');
 let tempContext = tempCanvas.getContext('2d', { willReadFrequently: true });
 
 function captureCurrentPixel(e) {
-	console.log (e.target)
-	let hexColor;
+	// console.log (e.target)
+	// let hexColor;
 	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child") {
 		return;
 	}
@@ -160,16 +160,33 @@ function colorNameTranslate(r,g,b){
 }
 
 function getColor(x, y) {
-	let pixel = tempContext.getImageData(x, y, 1, 1).data;
-	let red = pixel[0];
-	let green = pixel[1];
-	let blue = pixel[2];
-	let hex = rgbToHex(red, green, blue);
-	let name = colorNameTranslate(red, green, blue);
+	let listOfNames = []
+	let pixelList = tempContext.getImageData(x -2, y -2, 5, 5).data;
+	// console.log (pixelList)
 
-	console.log("Hex: ", hex);
+	for (i = 0; i < pixelList.length; i += 4) {
+		let red = pixelList[i];
+		let green = pixelList[i + 1];
+		let blue = pixelList[i + 2];
+		
+		// // NTC translation
+		// let hex = rgbToHex(red, green, blue);
+		// let n_match = ntc.name(hex);
+		// let n_shade_name = n_match[3];        // Text string: Shade name
+		// listOfNames.push(n_shade_name)
 
-	return name;
+		// Orgiginal translation
+		n_shade_name = colorNameTranslate(red, green, blue);
+		listOfNames.push(n_shade_name)
+	}
+	console.log (listOfNames)
+	let mostCommon = listOfNames.sort((a,b) =>
+		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length
+	).pop();
+
+	console.log("Most common: ", mostCommon )
+
+	return mostCommon;
 }
 
 function rgbToHex(r, g, b) {
