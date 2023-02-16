@@ -29,11 +29,13 @@ A user can close the eyedropper color tagger and keep all of the tags that exist
 In your terminal, execute
 `git clone https://github.com/Teaching-Accessibility/course-project-colorguide.git`
 
-In Chrome, go to this link: chrome://extensions, and switch to developer mode (toggle button in right hand corner)
+In Chrome, go to this link: chrome://extensions, and switch to developer mode (toggle button in upper right hand corner)
 
-Press Load Unpacked button and select folder where you cloned the repo
+Press Load Unpacked button and select the cloned repo folder
 
 Press Command Q to run the extension or select it under the puzzle piece icon on the taskbar of Chrome.
+
+If the extension does not work, restart Chrome by typing "chrome://restart" into the address bar
 
 https://webkul.com/blog/how-to-install-the-unpacked-extension-in-chrome/#:~:text=Goto%20Chrome%20Settings%20using%20three,Then%20Select%20Extensions.&text=Click%20on%20Load%20Unpacked%20and,which%20the%20manifest%20file%20exists. 
 
