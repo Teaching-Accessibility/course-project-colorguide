@@ -1,3 +1,4 @@
+let statusLabel = createStatusLabel ();
 let count = 0
 
 function createLabel(top, left, content) {
@@ -8,10 +9,12 @@ function createLabel(top, left, content) {
     newLabel.style.left = left;
     newLabel.style.zIndex = "99";
     newLabel.style.background = "#ffffff";
-		newLabel.style.cursor  = "pointer";
-		newLabel.style.display = "block"
+    newLabel.style.cursor  = "pointer";
+    newLabel.style.display = "block"
+    newLabel.style.width = "100px";
+    newLabel.style.height = "50px";
     newLabel.id = "ColorLabel" + count;
-		newLabel.className = "colorlabel";
+    newLabel.className = "colorlabel";
     count ++;
 
 
@@ -30,8 +33,15 @@ function addCloseButton(label) {
 	closeButton.style.display ="inline-flex";
 	closeButton.style.float = "right";
 	closeButton.style.color = "#000000";
+    closeButton.style.fontSize = "20px";
+    closeButton.style.width = "50%";
+    closeButton.style.height = "50%";
+    closeButton.style.alignItems = "center";
+    closeButton.style.justifyContent = "center";
+
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
+		label.style.display = "none"
         label.parentNode.removeChild(label);
     };
 
@@ -44,17 +54,21 @@ function addCloseButton(label) {
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 	minimizeButton.style.float = "left";
-	minimizeButton.style.display ="inline-flex";
+//	minimizeButton.style.display ="inline-block";
 	minimizeButton.style.color = "#000000";
+    minimizeButton.style.alignItems = "center";
+    minimizeButton.style.width = "50%";
+    minimizeButton.style.height = "50%";
+    minimizeButton.style.justifyContent = "center";
 	minimizeButton.className = "colorlabel_child";
-	minimizeButton.onclick = func
-
+	minimizeButton.onclick = func;
+	minimizeButton.style.fontSize = "25px";
+	minimizeButton.style.fontWeight = "normal";
 	let minimizeSymbol = document.createTextNode("-");
 	minimizeButton.appendChild( minimizeSymbol);
 
 	label.appendChild( minimizeButton);
 }
-
 
 function addContent (label, content) {
 	let textContent = document.createElement("p");
@@ -63,7 +77,8 @@ function addContent (label, content) {
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.padding = "10px 10px 0px 10px "; 
-
+    textContent.style.width = "100%";
+    textContent.style.height = "50%";
 	label.appendChild(textContent);
 }
 
@@ -84,7 +99,7 @@ function createMinimizedLabel (top, left, label) {
 	maximizeButton.style.color = "#ffffff";
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
-
+	maximizeButton.style.fontSize = "15px";
 	let  maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
 
@@ -106,3 +121,36 @@ function toggleDiv(div1, div2)
 		div2.style.display = 'block'
 	}
 } 
+
+function createStatusLabel () {
+	let newStatusLabel = document.createElement('div'); 
+
+	newStatusLabel.style.background = "green";
+	newStatusLabel.style.height = "30px";
+	newStatusLabel.style.width = "200px";
+	newStatusLabel.style.position = "fixed";
+	newStatusLabel.style.top = "0px";
+	newStatusLabel.style.right = "0px";
+	newStatusLabel.style.zIndex = "99";
+	newStatusLabel.style.display = "none";
+	newStatusLabel.style.cursor  = "pointer";
+
+	newStatusLabel.className = "colorlabel";
+
+	addCloseButton (newStatusLabel)
+	addContent (newStatusLabel, "Tool Turned On")
+
+	return newStatusLabel
+}
+
+function addStatusLabel () {
+	statusLabel.style.display = "block";
+	document.body.appendChild(statusLabel);
+}
+
+function removeStatusLabel () {
+	if (statusLabel.style.display === "none") return;
+
+	statusLabel.style.display = "none";
+	statusLabel.parentNode.removeChild(statusLabel);
+}
