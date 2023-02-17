@@ -25,17 +25,27 @@ function createLabel(top, left, content) {
 	document.body.appendChild(newMinimizedLabel);
 }
 
+function addButtons(newLabel, top, left){
+	let addButtons = document.createElement("div");
+	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
+	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
+  addCloseButton(newLabel);
+
+}
+
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
-	closeButton.style.display ="inline-flex";
-	closeButton.style.float = "right";
+		closeButton.style.float = "right";
+	closeButton.style.display ="inline";
+
 	closeButton.style.color = "#000000";
-		closeButton.style.fontSize = "20px";
+		closeButton.style.fontSize = "15px";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
         label.parentNode.removeChild(label);
     };
-
+		closeButton.style.paddingTop = "0px";
+	// closeButton.style.paddingBottom = "2px";
 	let closeSymbol = document.createTextNode("✕");
 	closeButton.appendChild(closeSymbol);
 
@@ -45,13 +55,15 @@ function addCloseButton(label) {
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 	minimizeButton.style.float = "left";
-//	minimizeButton.style.display ="inline-block";
+	minimizeButton.style.display ="inline";
 	minimizeButton.style.color = "#000000";
 	minimizeButton.className = "colorlabel_child";
+	minimizeButton.style.margin = "auto";
 	minimizeButton.onclick = func;
-	minimizeButton.style.fontSize = "25px";
+	minimizeButton.style.fontSize = "10px";
 	minimizeButton.style.fontWeight = "normal";
-	let minimizeSymbol = document.createTextNode("-");
+	minimizeButton.style.padding = "2px";
+	let minimizeSymbol = document.createTextNode("―");
 	minimizeButton.appendChild( minimizeSymbol);
 
 	label.appendChild( minimizeButton);
@@ -64,7 +76,8 @@ function addContent (label, content) {
 	textContent.appendChild(document.createTextNode(content));
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
-	textContent.style.padding = "10px 10px 0px 10px "; 
+	textContent.style.padding = "5px";
+	
 
 	label.appendChild(textContent);
 }
@@ -82,11 +95,11 @@ function createMinimizedLabel (top, left, label) {
 
 	let maximizeButton = document.createElement("p");
 	maximizeButton.style.float = "left";
-	maximizeButton.style.display ="inline-flex";
+	maximizeButton.style.display ="inline-block;";
 	maximizeButton.style.color = "#ffffff";
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
-	maximizeButton.style.fontSize = "15px";
+	maximizeButton.style.fontSize = "20px";
 	let  maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
 
