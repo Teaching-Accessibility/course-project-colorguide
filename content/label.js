@@ -9,10 +9,12 @@ function createLabel(top, left, content) {
     newLabel.style.left = left;
     newLabel.style.zIndex = "99";
     newLabel.style.background = "#ffffff";
-		newLabel.style.cursor  = "pointer";
-		newLabel.style.display = "block"
+    newLabel.style.cursor  = "pointer";
+    newLabel.style.display = "block"
+    newLabel.style.width = "100px";
+    newLabel.style.height = "50px";
     newLabel.id = "ColorLabel" + count;
-		newLabel.className = "colorlabel";
+    newLabel.className = "colorlabel";
     count ++;
 
 
@@ -31,7 +33,12 @@ function addCloseButton(label) {
 	closeButton.style.display ="inline-flex";
 	closeButton.style.float = "right";
 	closeButton.style.color = "#000000";
-		closeButton.style.fontSize = "20px";
+    closeButton.style.fontSize = "20px";
+    closeButton.style.width = "50%";
+    closeButton.style.height = "50%";
+    closeButton.style.alignItems = "center";
+    closeButton.style.justifyContent = "center";
+
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
@@ -49,6 +56,10 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.float = "left";
 //	minimizeButton.style.display ="inline-block";
 	minimizeButton.style.color = "#000000";
+    minimizeButton.style.alignItems = "center";
+    minimizeButton.style.width = "50%";
+    minimizeButton.style.height = "50%";
+    minimizeButton.style.justifyContent = "center";
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
 	minimizeButton.style.fontSize = "25px";
@@ -66,7 +77,8 @@ function addContent (label, content) {
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.padding = "10px 10px 0px 10px "; 
-
+    textContent.style.width = "100%";
+    textContent.style.height = "50%";
 	label.appendChild(textContent);
 }
 
