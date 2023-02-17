@@ -45,7 +45,7 @@ function addCloseButton(label) {
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 	minimizeButton.style.float = "left";
-	minimizeButton.style.display ="inline-flex";
+//	minimizeButton.style.display ="inline-block";
 	minimizeButton.style.color = "#000000";
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
