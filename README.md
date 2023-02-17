@@ -79,6 +79,9 @@ This is the window that includes the instructions for how to use the program, as
 
 There is no simulated back end.
 
+Design guidelines followed: 
+
+
 
 <img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
 
@@ -116,13 +119,27 @@ Design guidelines followed:
 
  
 Design guidelines followed: 
-WCAG 1.4.6 Contrast (Enchanced)
-WCAG 2.2.3 No Timing
-WCAG 2.3.1 Three Flashes or Below Threshold?
-WCAG 2.3.2 Three Flashes?
-WCAG 2.4.2 Page Titled
+WCAG 1.1 Text Alternatives - Test with NVDA
+WCAG 1.2 Time-based Media: There is no time-based media in our app
+WCAG 1.3.1 Info and Relationships - Test with NVDA
+WCAG 1.3.2 Meaningful Sequence
+WCAG 1.3.3 Sensory Characteristics
+WCAG 1.4.1 Use of Color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or disgtinguishing a visual element.
+WCAG 1.4.2 Audio Control: There is no automatic audio in our app.
+WCAG 1.4.6 Contrast (Enchanced): The visual presentation of text and images of text has a contrast ratio of at least 7:1
+WCAG 1.4.7 Low or No Background Audio: There is no prerecorded audio-only content
+WCAG 1.4.9 Images of Text: There are no images of text in our app.
+WCAG 1.4.11 Non-text Contrast: UI Components have a contrast ratio of at least 3:1 against adjacent color(s).
+WCAG 1.4.13 Content on Hover or Focus: There is no content on hover or keyboard focus that triggers additional content to become visible and then hidden.
+WCAG 2.2 Enough Time: There are no time constrictions for using our app.
+WCAG 2.3 Seizures and Physical Reactions: There is no content designed in a way known to cause seizures or other physical reactions in our app.
+WCAG 2.4.1 Bypass Blocks: There are no repeated blocks of content on multiple pages.
+WCAG 2.4.2 Page Titled: The pop-up with instructions has a title that describes the topic.
 WCAG 2.4.4 Link Purpose (In Context)
 WCAG 2.4.6 Headings and Labels
 WCAG 2.4.7 Focus Visible
 WCAG 2.5.5 Target Size - TODO
 WCAG 4.1.1 Parsing
+
+
+Kelley TODO: define brown
