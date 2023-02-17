@@ -42,16 +42,14 @@ function addCloseButton(label) {
 	closeButton.style.display ="inline";
 
 	closeButton.style.color = "#000000";
-<<<<<<< HEAD:label.js
-		closeButton.style.fontSize = "15px";
-=======
+
+
     closeButton.style.fontSize = "20px";
     closeButton.style.width = "50%";
     closeButton.style.height = "50%";
     closeButton.style.alignItems = "center";
     closeButton.style.justifyContent = "center";
 
->>>>>>> 635cddc1a54709289e23343a7de03cdac2904561:content/label.js
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
