@@ -12,7 +12,7 @@ function createLabel(top, left, content) {
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
     newLabel.style.width = "100px";
-    newLabel.style.height = "50px";
+    newLabel.style.height = "60px";
     newLabel.id = "ColorLabel" + count;
     newLabel.className = "colorlabel";
     count ++;
@@ -28,13 +28,6 @@ function createLabel(top, left, content) {
 	document.body.appendChild(newMinimizedLabel);
 }
 
-function addButtons(newLabel, top, left){
-	let addButtons = document.createElement("div");
-	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
-	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
-  addCloseButton(newLabel);
-
-}
 
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
@@ -49,7 +42,6 @@ function addCloseButton(label) {
         label.parentNode.removeChild(label);
     };
 		closeButton.style.paddingTop = "0px";
-	// closeButton.style.paddingBottom = "2px";
 	let closeSymbol = document.createTextNode("✕");
 	closeButton.appendChild(closeSymbol);
 
@@ -61,10 +53,7 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.float = "left";
 	minimizeButton.style.display ="inline";
 	minimizeButton.style.color = "#000000";
-    minimizeButton.style.alignItems = "center";
-    minimizeButton.style.width = "50%";
-    minimizeButton.style.height = "50%";
-    minimizeButton.style.justifyContent = "center";
+  
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.style.margin = "auto";
 	minimizeButton.onclick = func;
@@ -83,15 +72,16 @@ function addContent (label, content) {
 	textContent.appendChild(document.createTextNode(content));
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
-<<<<<<< HEAD:label.js
-	textContent.style.padding = "5px";
-	
+	// if (String(content).includes("Light") || String(content).includes("")){
+	// 		textContent.style.fontSize = "14px";
+	// } else {
+	// 		textContent.style.fontSize = "18px";
+	// }
+	textContent.style.fontSize = "18px";
+	textContent.style.paddingTop = "10px";
+	textContent.style.marginBottom = "100px";
 
-=======
-	textContent.style.padding = "10px 10px 0px 10px "; 
-    textContent.style.width = "100%";
-    textContent.style.height = "50%";
->>>>>>> 635cddc1a54709289e23343a7de03cdac2904561:content/label.js
+
 	label.appendChild(textContent);
 }
 

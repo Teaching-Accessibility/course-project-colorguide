@@ -41,6 +41,9 @@ function colorNameTranslate(r,g,b){
 			return "Light Red";
 		}
 		return "Red";
+	}  else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
+				// console.log("white");
+				return "White";
 	} else if ((0 <= saturation && saturation <= 10) &&  (11 <= lightness <= 89)){
 	// console.log("Grey");
 	if (dark){
@@ -50,10 +53,7 @@ function colorNameTranslate(r,g,b){
 			return "Light Grey";
 		}
 				return "Grey";
-	} else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
-				// console.log("white");
-				return "White";
-	} 
+	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
 		// console.log("orange");
 		if (dark){
