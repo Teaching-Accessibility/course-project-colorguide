@@ -79,13 +79,6 @@ This is the window that includes the instructions for how to use the program, as
 
 There is no simulated back end.
 
-Design guidelines followed: 
-WCAG 1.4.6 Contrast (Enchanced)
-No Timing?
-Three Flashes or Below Threshold?
-Three Flashes?
-
-
 
 <img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
 
@@ -122,3 +115,13 @@ Design guidelines followed:
 
 
  
+Design guidelines followed: 
+WCAG 1.4.6 Contrast (Enchanced)
+No Timing?
+Three Flashes or Below Threshold?
+Three Flashes?
+WCAG 2.4.2 Page Titled
+WCAG 2.4.4 Link Purpose (In Context)
+WCAG 2.4.6 Headings and Labels
+WCAG 2.4.7 Focus Visible
+WCAG 2.5.5 Target Size
