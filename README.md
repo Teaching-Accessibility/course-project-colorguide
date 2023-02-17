@@ -117,11 +117,12 @@ Design guidelines followed:
  
 Design guidelines followed: 
 WCAG 1.4.6 Contrast (Enchanced)
-No Timing?
-Three Flashes or Below Threshold?
-Three Flashes?
+WCAG 2.2.3 No Timing
+WCAG 2.3.1 Three Flashes or Below Threshold?
+WCAG 2.3.2 Three Flashes?
 WCAG 2.4.2 Page Titled
 WCAG 2.4.4 Link Purpose (In Context)
 WCAG 2.4.6 Headings and Labels
 WCAG 2.4.7 Focus Visible
-WCAG 2.5.5 Target Size
+WCAG 2.5.5 Target Size - TODO
+WCAG 4.1.1 Parsing
