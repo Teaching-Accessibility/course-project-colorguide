@@ -31,6 +31,7 @@ function addCloseButton(label) {
 	closeButton.style.display ="inline-flex";
 	closeButton.style.float = "right";
 	closeButton.style.color = "#000000";
+		closeButton.style.fontSize = "20px";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
@@ -49,8 +50,9 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.display ="inline-flex";
 	minimizeButton.style.color = "#000000";
 	minimizeButton.className = "colorlabel_child";
-	minimizeButton.onclick = func
-
+	minimizeButton.onclick = func;
+	minimizeButton.style.fontSize = "25px";
+	minimizeButton.style.fontWeight = "normal";
 	let minimizeSymbol = document.createTextNode("-");
 	minimizeButton.appendChild( minimizeSymbol);
 
@@ -85,7 +87,7 @@ function createMinimizedLabel (top, left, label) {
 	maximizeButton.style.color = "#ffffff";
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
-
+	maximizeButton.style.fontSize = "15px";
 	let  maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
 
