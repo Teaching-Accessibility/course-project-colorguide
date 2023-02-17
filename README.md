@@ -135,11 +135,21 @@ WCAG 2.2 Enough Time: There are no time constrictions for using our app.
 WCAG 2.3 Seizures and Physical Reactions: There is no content designed in a way known to cause seizures or other physical reactions in our app.
 WCAG 2.4.1 Bypass Blocks: There are no repeated blocks of content on multiple pages.
 WCAG 2.4.2 Page Titled: The pop-up with instructions has a title that describes the topic.
-WCAG 2.4.4 Link Purpose (In Context)
-WCAG 2.4.6 Headings and Labels
-WCAG 2.4.7 Focus Visible
+WCAG 2.4.3 Focus Order: Focusable components receive focus in an order that preserves meaning and operability
+WCAG 2.4.4 Link Purpose (In Context) - Test with NVDA
+WCAG 2.4.6 Headings and Labels: Heading and labels describe topic or purpose.
+WCAG 2.4.7 Focus Visible: Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+WCAG 2.5.1 Pointer Gestures: All functionality can be operated with a single pointer without a path-based gesture.
+WCAG 2.5.2 Pointer Cancellation: For functionality operated using a single pointer, completion of the function is on the up-event.
+WCAG 2.5.3 Label in Name - Test with NVDA
+WCAG 2.5.4 Motion Actuation: There is no functionality requiring device motion.
 WCAG 2.5.5 Target Size - TODO
-WCAG 4.1.1 Parsing
+WCAG 3.1.1 Language of Page: The default human language can be programmatically determined.
+WCAG 3.2.1 On Focus: When any user interface component receives focus, it does not initiate a change of context.
+WCAG 3.2.2  On Input: Changing the setting of any user interface component does not automatically cause a change of context unless the use has been advised of the behavior before using the component.
+WCAG 4.1.1 Parsing - Test with NVDA
+WCAG 4.1.2 Name, Role, Value - Test with NVDA
+
 
 
 Kelley TODO: define brown
