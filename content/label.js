@@ -72,14 +72,17 @@ function addContent (label, content) {
 	textContent.appendChild(document.createTextNode(content));
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
+		//textContent.style.alignItems ="center";
+		textContent.style.margin = "auto";
 	// if (String(content).includes("Light") || String(content).includes("")){
 	// 		textContent.style.fontSize = "14px";
 	// } else {
 	// 		textContent.style.fontSize = "18px";
 	// }
 	textContent.style.fontSize = "18px";
-	textContent.style.paddingTop = "10px";
-	textContent.style.marginBottom = "100px";
+	textContent.style.paddingTop = "10%";
+//	textContent.style.paddingBottom = "20%";
+	//textContent.style.marginBottom = "50%";
 
 
 	label.appendChild(textContent);
