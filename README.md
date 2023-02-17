@@ -170,7 +170,3 @@ WCAG 3.2.2  On Input: Changing the setting of any user interface component does 
 WCAG 4.1.1 Parsing: Elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique.
 
 WCAG 4.1.2 Name, Role, Value: For all user interface components, the name and role can be programmatically determined
-
-
-
-Kelley TODO: define brown
