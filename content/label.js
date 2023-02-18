@@ -17,11 +17,10 @@ function createLabel(top, left, content) {
     newLabel.className = "colorlabel";
     count ++;
 
-
 	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
 
 	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
-  addCloseButton(newLabel);
+	addCloseButton(newLabel);
 	addContent(newLabel, content);
 
 	document.body.appendChild(newLabel);
@@ -31,17 +30,19 @@ function createLabel(top, left, content) {
 
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
-		closeButton.style.float = "right";
-	closeButton.style.display ="inline";
 
+	closeButton.style.float = "right";
+	closeButton.style.display ="inline";
 	closeButton.style.color = "#000000";
-		closeButton.style.fontSize = "15px";
+	closeButton.style.fontSize = "15px";
+	closeButton.style.paddingTop = "0px";
+
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
         label.parentNode.removeChild(label);
     };
-		closeButton.style.paddingTop = "0px";
+
 	let closeSymbol = document.createTextNode("✕");
 	closeButton.appendChild(closeSymbol);
 
@@ -50,16 +51,18 @@ function addCloseButton(label) {
 
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
+
 	minimizeButton.style.float = "left";
 	minimizeButton.style.display ="inline";
 	minimizeButton.style.color = "#000000";
-  
-	minimizeButton.className = "colorlabel_child";
 	minimizeButton.style.margin = "auto";
-	minimizeButton.onclick = func;
 	minimizeButton.style.fontSize = "10px";
 	minimizeButton.style.fontWeight = "normal";
 	minimizeButton.style.padding = "2px";
+
+	minimizeButton.className = "colorlabel_child";
+	minimizeButton.onclick = func;
+
 	let minimizeSymbol = document.createTextNode("―");
 	minimizeButton.appendChild( minimizeSymbol);
 
@@ -68,38 +71,44 @@ function addMinimizeButton(label, func) {
 
 function addContent (label, content) {
 	let textContent = document.createElement("p");
-	textContent.className = "colorlabel_child";
-	textContent.appendChild(document.createTextNode(content));
+
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "10%";
 
+	textContent.className = "colorlabel_child";
+	textContent.appendChild(document.createTextNode(content));
+
 	label.appendChild(textContent);
 }
 
 function createMinimizedLabel (top, left, label) {
 	let newMinimizedLabel = document.createElement('div');
+
 	newMinimizedLabel.style.position = 'absolute';
-  newMinimizedLabel.style.top = top;
-  newMinimizedLabel.style.left = left;
-  newMinimizedLabel.style.zIndex = "99";
-  newMinimizedLabel.style.background = "#000000";
+	newMinimizedLabel.style.top = top;
+	newMinimizedLabel.style.left = left;
+	newMinimizedLabel.style.zIndex = "99";
+	newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
 	newMinimizedLabel.style.display = "none"
+
 	newMinimizedLabel.className = "colorlabel_child";
 
 	let maximizeButton = document.createElement("p");
+
 	maximizeButton.style.float = "left";
 	maximizeButton.style.display ="inline-block;";
 	maximizeButton.style.color = "#ffffff";
+	maximizeButton.style.fontSize = "20px";
+
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
-	maximizeButton.style.fontSize = "20px";
+
 	let  maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
-
 	newMinimizedLabel.appendChild(maximizeButton);
 
 	return newMinimizedLabel
@@ -137,13 +146,15 @@ function createStatusLabel () {
 	addCloseButton (newStatusLabel)
 	let content =  "Tool Turned On";
 	let textContent = document.createElement("p");
-	textContent.className = "colorlabel_child";
-	textContent.appendChild(document.createTextNode(content));
+
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "2%";
+
+	textContent.className = "colorlabel_child";
+	textContent.appendChild(document.createTextNode(content));
 
 	newStatusLabel.appendChild(textContent);
 

@@ -1,14 +1,12 @@
-
-
 .body{
- font-family: 'Open Sans', sans-serif;
- 
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 .button {
   font-family: 'Open Sans', sans-serif;
   font-size: large;
-   margin: 0 auto;
+  margin: 0 auto;
   background-color: white;
   border-width: thin;
   cursor: pointer;
@@ -37,7 +35,7 @@ p {
 }
 
 li{
- margin: 5px 0;
+  margin: 5px 0;
 }
 
 .icon {
