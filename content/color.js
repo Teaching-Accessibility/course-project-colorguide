@@ -7,15 +7,12 @@ function colorNameTranslate(r,g,b){
 	let dark = false;
 	let light = false;
 	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
-		// console.log("dark");
 		dark = true;
 	} else if (((75 <= saturation && saturation <= 100) && (75 <= lightness && lightness <= 95) ) || ((0 <= saturation && saturation <= 74) && (60 <= lightness && lightness <= 90) )){
-		// console.log("light");
 		light = true;
 	}
 
 	if ((290 <= hue && hue <= 344) && 10 <= saturation){
-		// console.log("pink");
 		if (dark){
 			return "Dark Pink";
 		}
@@ -33,7 +30,6 @@ function colorNameTranslate(r,g,b){
 		return "Brown";
 	}
 	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
-		// console.log("red");
 		if (dark){
 			return "Dark Red";
 		}
@@ -42,10 +38,8 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Red";
 	}  else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
-				// console.log("white");
 				return "White";
 	} else if ((0 <= saturation && saturation <= 10) &&  (11 <= lightness <= 89)){
-	// console.log("Grey");
 	if (dark){
 			return "Dark Grey";
 		}
@@ -55,7 +49,6 @@ function colorNameTranslate(r,g,b){
 				return "Grey";
 	}
 	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
-		// console.log("orange");
 		if (dark){
 			return "Brown";
 		}
@@ -65,7 +58,6 @@ function colorNameTranslate(r,g,b){
 		return "Orange";
 	} 
 	else if ((45 <= hue && hue <= 74) && 10 <= saturation){
-		// console.log("yellow");
 		if (dark){
 			return "Dark Yellow";
 		}
@@ -75,7 +67,6 @@ function colorNameTranslate(r,g,b){
 				return "Yellow";
 	}
 	else if ((75 <= hue && hue <= 144) && 10 <= saturation){
-		// console.log("Green");
 		if (dark){
 			return "Dark Green";
 		}
@@ -85,7 +76,6 @@ function colorNameTranslate(r,g,b){
 				return "Green";
 	}
 	if ((145 <= hue && hue <= 199) && 10 <= saturation){
-			// console.log("teal");
 			if (dark){
 				return "Dark Teal";
 			}
@@ -95,7 +85,6 @@ function colorNameTranslate(r,g,b){
 			return "Teal";
 	}
 	else if ((200 <= hue && hue <= 254) && 10 <= saturation){
-		// console.log("blue");
 		if (dark){
 				return "Dark Blue";
 			}
@@ -105,7 +94,6 @@ function colorNameTranslate(r,g,b){
 				return "Blue";
 	}
 	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
-		// console.log("purple");
 		if (dark){
 				return "Dark Purple";
 			}
@@ -114,7 +102,6 @@ function colorNameTranslate(r,g,b){
 			}
 				return "Purple";
 	} else if ((0 <=hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
-			// console.log("black");
 				return "Black";
 	}
 	
@@ -132,7 +119,6 @@ function colorNameTranslate(r,g,b){
 function getColor(x, y) {
 	let listOfNames = []
 	let pixelList = tempContext.getImageData(x -2, y -2, 5, 5).data;
-	// console.log (pixelList)
 
 	for (i = 0; i < pixelList.length; i += 4) {
 		let red = pixelList[i];
@@ -140,12 +126,7 @@ function getColor(x, y) {
 		let blue = pixelList[i + 2];
 		
 		// // NTC translation
-		// let hex = rgbToHex(red, green, blue);
-		// let n_match = ntc.name(hex);
-		// let n_shade_name = n_match[3];        // Text string: Shade name
-		// listOfNames.push(n_shade_name)
-
-		// Orgiginal translation
+		// Original translation
 		n_shade_name = colorNameTranslate(red, green, blue);
 		listOfNames.push(n_shade_name)
 	}
@@ -155,7 +136,6 @@ function getColor(x, y) {
 		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length
 	).pop();
 
-	// console.log("Most common: ", mostCommon )
 	return mostCommon;
 }
 
@@ -219,6 +199,5 @@ function rgbToHsl(r, g, b) {
   s = +(s * 100).toFixed(1);
   l = +(l * 100).toFixed(1);
 
-  // return "hsl(" + h + "," + s + "%," + l + "%)";
 	return [h,s,l]
 }

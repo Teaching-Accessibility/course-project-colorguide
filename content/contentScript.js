@@ -17,7 +17,6 @@ function captureCurrentPixel(e) {
 
 			tempContext.drawImage(img, 0, 0);
             tempContext.setAtt
-			// Use pixel ratio to make sure it works on screens with very high resolutions like Retina
 			let colorName = getColor(e.clientX * window.devicePixelRatio, e.clientY * window.devicePixelRatio);
 
 			createLabel (e.pageY + 'px', e.pageX + 'px', 	colorName )

@@ -147,8 +147,6 @@ function createStatusLabel () {
 
 	newStatusLabel.appendChild(textContent);
 
-	// addContent (newStatusLabel, "Tool Turned On")
-
 	return newStatusLabel
 }
 
