@@ -7,7 +7,7 @@ function createLabel(top, left, content) {
     newLabel.style.position = 'absolute';
     newLabel.style.top = top;
     newLabel.style.left = left;
-    newLabel.style.zIndex = "99";
+    newLabel.style.zIndex = "999999999999999";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
@@ -90,7 +90,7 @@ function createMinimizedLabel (top, left, label) {
 	newMinimizedLabel.style.position = 'absolute';
 	newMinimizedLabel.style.top = top;
 	newMinimizedLabel.style.left = left;
-	newMinimizedLabel.style.zIndex = "99";
+	newMinimizedLabel.style.zIndex = "999999999999999";
 	newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
 	newMinimizedLabel.style.display = "none"
@@ -137,7 +137,7 @@ function createStatusLabel () {
 	newStatusLabel.style.position = "fixed";
 	newStatusLabel.style.top = "0px";
 	newStatusLabel.style.right = "0px";
-	newStatusLabel.style.zIndex = "99";
+	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
 
