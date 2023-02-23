@@ -26,6 +26,9 @@ function captureCurrentPixel(e) {
 
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
+		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+			continue;
+		}
 		children[i].style['pointer-events'] = 'none';
 	}
 	addStatusLabel ();
@@ -34,6 +37,9 @@ const toggleOn = () => {
 
 const toggleOff = () => {
 	for (let i = 0; i < children.length; i++) {
+		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+			continue;
+		}
 		children[i].style['pointer-events'] = 'auto';
 	}
 	document.body.style.cursor = "default";
