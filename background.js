@@ -29,3 +29,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	}
 	return true;
 });
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+	if (on){
+		on = false;
+	}
+});
+
+

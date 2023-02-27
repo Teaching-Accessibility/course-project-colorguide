@@ -56,3 +56,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		console.log(`Tool turned off`)
 	}
 });
+//  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//     toggleOff ()
+// 		console.log(`Tool turned off`)
+//  });
