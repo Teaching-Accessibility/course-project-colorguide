@@ -52,12 +52,12 @@ const toggleOff = () => {
 
 // buggy functionality for removing all tags with alt shift r
 const labelRemove = () => {
+	console.log(children.length);
 	for (let i = 0; i < children.length; i++) {
-		if (children[i].className === "colorlabel_child") {
-			  children[i].remove();
-        
+		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+			  children[i].remove();   
 		}
-		children[i].style['pointer-events'] = 'auto';
+	
 	}
 	console.log("Label remove function");
 }
