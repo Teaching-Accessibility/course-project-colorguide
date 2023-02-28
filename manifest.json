@@ -33,15 +33,15 @@
   "commands": {
     "toggle": {
       "suggested_key": {
-        "default": "Ctrl+Q",
-        "mac": "Command+Q"
+        "default": "Alt+Shift+W",
+        "mac": "Alt+Shift+W"
       },
       "description": "Toggle tool"
     },
     "_execute_action": {
       "suggested_key": {
-        "windows": "Ctrl+Q",
-        "mac": "Command+Q"
+        "windows": "Alt+Shift+W",
+        "mac": "Alt+Shift+W"
       }
     }
   },
