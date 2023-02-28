@@ -24,6 +24,8 @@ function captureCurrentPixel(e) {
 	});
 }
 
+
+
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
 		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
@@ -47,6 +49,28 @@ const toggleOff = () => {
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
+const labelRemove = () => {
+	for (let i = 0; i < children.length; i++) {
+		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+			  children[i].remove();
+        
+		}
+		children[i].style['pointer-events'] = 'auto';
+	}
+	console.log("Label remove function");
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+	if (request.labelRemove === "true") {
+		labelRemove()
+		console.log(`all labels removed`)
+	} else if (request.labelRemove === "false") {
+		labelRemove()
+		console.log(`opposite`)
+	}
+});
+
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.toggleOn === "true") {
 		toggleOn ()
@@ -56,6 +80,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		console.log(`Tool turned off`)
 	}
 });
+
 //  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 //     toggleOff ()
 // 		console.log(`Tool turned off`)

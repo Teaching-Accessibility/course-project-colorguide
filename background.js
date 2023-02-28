@@ -12,6 +12,15 @@ chrome.commands.onCommand.addListener((command) => {
 	}
 });
 
+chrome.commands.onCommand.addListener((command) => {
+	if (command === 'labels'){
+		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+			chrome.tabs.sendMessage(tabs[0].id, {labelRemove: on? "true":"false"});
+        })
+	}
+		
+});
+
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 	if (request.message == 'capture') {

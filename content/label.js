@@ -49,6 +49,7 @@ function addCloseButton(label) {
 	label.appendChild(closeButton);
 }
 
+
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 
