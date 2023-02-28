@@ -49,9 +49,11 @@ const toggleOff = () => {
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
+
+// buggy functionality for removing all tags with alt shift r
 const labelRemove = () => {
 	for (let i = 0; i < children.length; i++) {
-		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+		if (children[i].className === "colorlabel_child") {
 			  children[i].remove();
         
 		}
