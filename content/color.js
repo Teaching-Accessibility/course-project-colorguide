@@ -6,13 +6,14 @@ function colorNameTranslate(r,g,b){
 	let lightness = hsl[2];
 	let dark = false;
 	let light = false;
+
 	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
 		dark = true;
 	} else if (((75 <= saturation && saturation <= 100) && (75 <= lightness && lightness <= 95) ) || ((0 <= saturation && saturation <= 74) && (60 <= lightness && lightness <= 90) )){
 		light = true;
 	}
 
-	if ((300 <= hue && hue <= 344) && 10 <= saturation){
+	if ((300 <= hue && hue <= 344) && 15 <= saturation){
 		if (dark){
 			return "Dark Pink";
 		}
@@ -29,7 +30,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Brown";
 	}
-	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 10 <= saturation ){
+	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 15 <= saturation ){
 		if (dark){
 			return "Dark Red";
 		}
@@ -39,16 +40,16 @@ function colorNameTranslate(r,g,b){
 		return "Red";
 	}  else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
 				return "White";
-	} else if ((0 <= saturation && saturation <= 10) &&  (11 <= lightness <= 89)){
+	} else if ((0 <= saturation && saturation <= 15) &&  (11 <= lightness <= 89)){
 	if (dark){
-			return "Dark Grey";
+			return "Dark Gray";
 		}
 		if (light){
-			return "Light Grey";
+			return "Light Gray";
 		}
-				return "Grey";
+				return "Gray";
 	}
-	else if ((15 <= hue && hue <= 44) && 10 <= saturation){
+	else if ((15 <= hue && hue <= 44) && 15 <= saturation){
 		if (dark){
 			return "Brown";
 		}
@@ -57,7 +58,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Orange";
 	} 
-	else if ((45 <= hue && hue <= 74) && 10 <= saturation){
+	else if ((45 <= hue && hue <= 74) && 15 <= saturation){
 		if (dark){
 			return "Dark Yellow";
 		}
@@ -66,7 +67,7 @@ function colorNameTranslate(r,g,b){
 		}
 				return "Yellow";
 	}
-	else if ((75 <= hue && hue <= 144) && 10 <= saturation){
+	else if ((75 <= hue && hue <= 144) && 15 <= saturation){
 		if (dark){
 			return "Dark Green";
 		}
@@ -75,7 +76,7 @@ function colorNameTranslate(r,g,b){
 		}
 				return "Green";
 	}
-	if ((145 <= hue && hue <= 199) && 10 <= saturation){
+	if ((145 <= hue && hue <= 199) && 15 <= saturation){
 			if (dark){
 				return "Dark Teal";
 			}
@@ -84,7 +85,7 @@ function colorNameTranslate(r,g,b){
 			}
 			return "Teal";
 	}
-	else if ((200 <= hue && hue <= 254) && 10 <= saturation){
+	else if ((200 <= hue && hue <= 254) && 15 <= saturation){
 		if (dark){
 				return "Dark Blue";
 			}
@@ -93,7 +94,7 @@ function colorNameTranslate(r,g,b){
 			}
 				return "Blue";
 	}
-	else if ((255 <= hue && hue <= 299) && 10 <= saturation){
+	else if ((255 <= hue && hue <= 299) && 15 <= saturation){
 		if (dark){
 				return "Dark Purple";
 			}
