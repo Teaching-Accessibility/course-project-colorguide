@@ -13,6 +13,14 @@ function colorNameTranslate(r,g,b){
 		light = true;
 	}
 
+	if ((0 <= hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
+		return "Black";
+	}
+	if ((0 <= hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
+		return "White";
+	}
+
+
 	if ((300 <= hue && hue <= 344) && 15 <= saturation){
 		if (dark){
 			return "Dark Pink";
@@ -38,8 +46,6 @@ function colorNameTranslate(r,g,b){
 			return "Light Red";
 		}
 		return "Red";
-	}  else if ((0 <=hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
-				return "White";
 	} else if ((0 <= saturation && saturation <= 15) &&  (11 <= lightness <= 89)){
 	if (dark){
 			return "Dark Gray";
@@ -47,7 +53,7 @@ function colorNameTranslate(r,g,b){
 		if (light){
 			return "Light Gray";
 		}
-				return "Gray";
+		return "Gray";
 	}
 	else if ((15 <= hue && hue <= 44) && 15 <= saturation){
 		if (dark){
@@ -65,7 +71,7 @@ function colorNameTranslate(r,g,b){
 		if (light){
 			return "Light Yellow";
 		}
-				return "Yellow";
+		return "Yellow";
 	}
 	else if ((75 <= hue && hue <= 144) && 15 <= saturation){
 		if (dark){
@@ -74,7 +80,7 @@ function colorNameTranslate(r,g,b){
 		if (light){
 			return "Light Green";
 		}
-				return "Green";
+		return "Green";
 	}
 	if ((145 <= hue && hue <= 199) && 15 <= saturation){
 			if (dark){
@@ -83,7 +89,7 @@ function colorNameTranslate(r,g,b){
 			if (light){
 				return "Light Teal";
 			}
-			return "Teal";
+		return "Teal";
 	}
 	else if ((200 <= hue && hue <= 254) && 15 <= saturation){
 		if (dark){
@@ -92,7 +98,7 @@ function colorNameTranslate(r,g,b){
 			if (light){
 				return "Light Blue";
 			}
-				return "Blue";
+		return "Blue";
 	}
 	else if ((255 <= hue && hue <= 299) && 15 <= saturation){
 		if (dark){
@@ -101,9 +107,7 @@ function colorNameTranslate(r,g,b){
 			if (light){
 				return "Light Purple";
 			}
-				return "Purple";
-	} else if ((0 <=hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
-				return "Black";
+		return "Purple";
 	}
 	
 
