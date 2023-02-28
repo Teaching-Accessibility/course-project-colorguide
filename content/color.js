@@ -12,7 +12,7 @@ function colorNameTranslate(r,g,b){
 		light = true;
 	}
 
-	if ((290 <= hue && hue <= 344) && 10 <= saturation){
+	if ((300 <= hue && hue <= 344) && 10 <= saturation){
 		if (dark){
 			return "Dark Pink";
 		}
@@ -93,7 +93,7 @@ function colorNameTranslate(r,g,b){
 			}
 				return "Blue";
 	}
-	else if ((255 <= hue && hue <= 289) && 10 <= saturation){
+	else if ((255 <= hue && hue <= 299) && 10 <= saturation){
 		if (dark){
 				return "Dark Purple";
 			}
