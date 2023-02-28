@@ -21,7 +21,7 @@ function colorNameTranslate(r,g,b){
 	}
 
 
-	if ((300 <= hue && hue <= 344) && 12 <= saturation){
+	if ((290 <= hue && hue <= 344) && 12 <= saturation){
 		if (dark){
 			return "Dark Pink";
 		}
@@ -91,7 +91,7 @@ function colorNameTranslate(r,g,b){
 			}
 		return "Teal";
 	}
-	else if ((200 <= hue && hue <= 254) && 12 <= saturation){
+	else if ((200 <= hue && hue <= 259) && 12 <= saturation){
 		if (dark){
 				return "Dark Blue";
 			}
@@ -100,7 +100,7 @@ function colorNameTranslate(r,g,b){
 			}
 		return "Blue";
 	}
-	else if ((255 <= hue && hue <= 299) && 12 <= saturation){
+	else if ((260 <= hue && hue <= 289) && 12 <= saturation){
 		if (dark){
 				return "Dark Purple";
 			}
