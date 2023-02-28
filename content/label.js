@@ -78,7 +78,7 @@ function addContent (label, content) {
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "10%";
-
+	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.className = "colorlabel_child";
 	textContent.appendChild(document.createTextNode(content));
 
