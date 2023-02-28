@@ -21,7 +21,7 @@ function colorNameTranslate(r,g,b){
 	}
 
 
-	if ((300 <= hue && hue <= 344) && 15 <= saturation){
+	if ((300 <= hue && hue <= 344) && 12 <= saturation){
 		if (dark){
 			return "Dark Pink";
 		}
@@ -38,7 +38,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Brown";
 	}
-	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 15 <= saturation ){
+	else if ((0 <= hue && hue <= 14 || 345 <= hue && hue <= 360) && 12 <= saturation ){
 		if (dark){
 			return "Dark Red";
 		}
@@ -46,7 +46,7 @@ function colorNameTranslate(r,g,b){
 			return "Light Red";
 		}
 		return "Red";
-	} else if ((0 <= saturation && saturation <= 15) &&  (11 <= lightness <= 89)){
+	} else if ((0 <= saturation && saturation <= 12) &&  (11 <= lightness <= 89)){
 	if (dark){
 			return "Dark Gray";
 		}
@@ -55,7 +55,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Gray";
 	}
-	else if ((15 <= hue && hue <= 44) && 15 <= saturation){
+	else if ((15 <= hue && hue <= 44) && 12 <= saturation){
 		if (dark){
 			return "Brown";
 		}
@@ -64,7 +64,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Orange";
 	} 
-	else if ((45 <= hue && hue <= 74) && 15 <= saturation){
+	else if ((45 <= hue && hue <= 74) && 12 <= saturation){
 		if (dark){
 			return "Dark Yellow";
 		}
@@ -73,7 +73,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Yellow";
 	}
-	else if ((75 <= hue && hue <= 144) && 15 <= saturation){
+	else if ((75 <= hue && hue <= 144) && 12 <= saturation){
 		if (dark){
 			return "Dark Green";
 		}
@@ -82,7 +82,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Green";
 	}
-	if ((145 <= hue && hue <= 199) && 15 <= saturation){
+	if ((145 <= hue && hue <= 199) && 12 <= saturation){
 			if (dark){
 				return "Dark Teal";
 			}
@@ -91,7 +91,7 @@ function colorNameTranslate(r,g,b){
 			}
 		return "Teal";
 	}
-	else if ((200 <= hue && hue <= 254) && 15 <= saturation){
+	else if ((200 <= hue && hue <= 254) && 12 <= saturation){
 		if (dark){
 				return "Dark Blue";
 			}
@@ -100,7 +100,7 @@ function colorNameTranslate(r,g,b){
 			}
 		return "Blue";
 	}
-	else if ((255 <= hue && hue <= 299) && 15 <= saturation){
+	else if ((255 <= hue && hue <= 299) && 12 <= saturation){
 		if (dark){
 				return "Dark Purple";
 			}
