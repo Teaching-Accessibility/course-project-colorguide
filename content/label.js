@@ -34,15 +34,18 @@ function addCloseButton(label) {
 	closeButton.style.float = "right";
 	closeButton.style.display ="inline";
 	closeButton.style.color = "#000000";
+	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	closeButton.style.paddingTop = "2px";
-	closeButton.style.paddingRight = "5px";
+	 closeButton.style.padding= "4px";
+	
 
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
         label.parentNode.removeChild(label);
     };
+	closeButton.style.fontFamily = "Arial,Calibri,sans-serif";
+	closeButton.style.fontWeight = "normal";
 
 	let closeSymbol = document.createTextNode("✕");
 	closeButton.appendChild(closeSymbol);
@@ -62,10 +65,15 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.fontWeight = "normal";
 	minimizeButton.style.padding = "5px";
 
+
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
+	minimizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
+	minimizeButton.style.fontWeight = "normal";
+
 
 	let minimizeSymbol = document.createTextNode("―");
+
 	minimizeButton.appendChild( minimizeSymbol);
 
 	label.appendChild( minimizeButton);
@@ -89,11 +97,11 @@ function addContent (label, content) {
 	 textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	}
-	
 	//  textContent.style.paddingLeft = "1.5%";
 	//  textContent.style.paddingRight = "1.5%";
 	///textContent.style.paddingBottom = "12%";
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
+	textContent.style.fontWeight = "normal";
 	textContent.className = "colorlabel_child";
 
 	textContent.appendChild(document.createTextNode(content));
@@ -122,7 +130,9 @@ function createMinimizedLabel (top, left, label) {
 	maximizeButton.style.fontSize = "20px";
 	maximizeButton.style.padding = "4px";
 
-
+	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
+	maximizeButton.style.fontWeight = "normal";
+	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
 
