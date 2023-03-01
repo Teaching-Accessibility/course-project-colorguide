@@ -36,7 +36,7 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.style.fontSize = "20px";
 	closeButton.style.paddingTop = "2px";
-	closeButton.style.paddingRight = "4px";
+	closeButton.style.paddingRight = "5px";
 
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
@@ -60,7 +60,7 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.margin = "auto";
 	minimizeButton.style.fontSize = "15px";
 	minimizeButton.style.fontWeight = "normal";
-	minimizeButton.style.padding = "4px";
+	minimizeButton.style.padding = "5px";
 
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
