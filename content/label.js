@@ -36,7 +36,7 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	 closeButton.style.padding= "5px";
+	 closeButton.style.padding= "4px";
 	
 
 	closeButton.className = "colorlabel_child";
@@ -64,6 +64,7 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.fontSize = "15px";
 	minimizeButton.style.fontWeight = "normal";
 	minimizeButton.style.padding = "5px";
+	minimizeButton.style.paddingBottom = "6px";
 
 
 	minimizeButton.className = "colorlabel_child";
@@ -125,13 +126,15 @@ function createMinimizedLabel (top, left, label) {
 	let maximizeButton = document.createElement("p");
 
 	maximizeButton.style.float = "left";
-	maximizeButton.style.display ="inline-block;";
+	//maximizeButton.style.display ="inline-block;";
 	maximizeButton.style.color = "#ffffff";
-	maximizeButton.style.fontSize = "20px";
-	maximizeButton.style.padding = "4px";
+	maximizeButton.style.fontSize = "25px";
+	maximizeButton.style.marginTop = "0px";
+	maximizeButton.style.marginBottom = "0px";
+	maximizeButton.style.padding = "5px";
 
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
-	maximizeButton.style.fontWeight = "normal";
+	//maximizeButton.style.fontWeight = "normal";
 	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
