@@ -77,12 +77,25 @@ function addContent (label, content) {
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.margin = "auto";
-	textContent.style.fontSize = "18px";
-	textContent.style.paddingTop = "12%";
-	textContent.style.paddingLeft = "2%";
-	textContent.style.paddingRight = "2%";
+
+	if (content.length <= 6 ){
+		textContent.style.fontSize = "18px";
+	 textContent.style.paddingTop = "25%";
+	 textContent.style.paddingLeft= "20%";
+		textContent.style.paddingRight = "20%";
+	} else{
+		textContent.style.fontSize = "18px";
+	 textContent.style.paddingTop = "10%";
+	 textContent.style.paddingLeft= "20%";
+		textContent.style.paddingRight = "20%";
+	}
+	
+	//  textContent.style.paddingLeft = "1.5%";
+	//  textContent.style.paddingRight = "1.5%";
+	///textContent.style.paddingBottom = "12%";
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.className = "colorlabel_child";
+
 	textContent.appendChild(document.createTextNode(content));
 
 	label.appendChild(textContent);
@@ -155,6 +168,7 @@ function createStatusLabel () {
 
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
+	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "2%";
