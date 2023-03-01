@@ -36,7 +36,7 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	 closeButton.style.padding= "4px";
+	 closeButton.style.padding= "5px";
 	
 
 	closeButton.className = "colorlabel_child";
