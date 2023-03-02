@@ -20,6 +20,7 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: x-large;
+   text-align: center;
 
 }
 
@@ -29,9 +30,9 @@ p {
 }
 
 .instructions{
-  padding: 0px 30px 0px 25px;
+  padding: 0px 45px 0px 20px;
   font-size: 15px;
-  width: 80%;
+  width: 90%;
 }
 
 li{
