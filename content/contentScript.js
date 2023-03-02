@@ -7,7 +7,6 @@ function captureCurrentPixel(e) {
 		return;
 	}
 
-	console.log("Capturing...")
 	chrome.runtime.sendMessage({message: 'capture'}, (currentScreen) => {
 		let img = new Image();
 		img.src = currentScreen.imgSrc;
@@ -29,8 +28,6 @@ function captureCurrentPixel(e) {
 		}
 	});
 }
-
-
 
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
@@ -58,39 +55,29 @@ const toggleOff = () => {
 
 // buggy functionality for removing all tags with alt shift r
 const labelRemove = () => {
-	console.log(children.length);
-	removeStatusLabel ();
-	for (let i = 0; i < children.length; i++) {
-		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
-			  children[i].remove();   
-		}
-	
+	// removeStatusLabel ();
+	const labels = Array.prototype.slice.call(document.getElementsByClassName("colorlabel"), 0);
+	for (const label of labels) {
+		if (label.id === "statuslabel") continue;
+		label.parentNode.removeChild(label);
 	}
-	console.log("Label remove function");
+
+	console.log (`Deleted ${labels.length} labels`)
 }
 
+// Status of tool
+let on = false
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-	if (request.labelRemove === "true") {
+	if (request.message === 'toggleTool') {
+		on = !on
+		if (on) {
+			toggleOn ()
+			console.log(`Tool turned on`)
+		} else {
+			toggleOff ()
+			console.log(`Tool turned off`)
+		}
+	} else if (request.message === 'removeLabels') {
 		labelRemove()
-		console.log(`all labels removed`)
-	} else if (request.labelRemove === "false") {
-		labelRemove()
-		console.log(`opposite`)
 	}
 });
-
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-	if (request.toggleOn === "true") {
-		toggleOn ()
-		console.log(`Tool turned on`)
-	} else if (request.toggleOn === "false") {
-		toggleOff ()
-		console.log(`Tool turned off`)
-	}
-});
-
-//  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-//     toggleOff ()
-// 		console.log(`Tool turned off`)
-//  });

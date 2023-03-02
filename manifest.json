@@ -3,7 +3,7 @@
   "name": "ColorGuide Online Shopping Assistant",
   "description": "This browser extension allows users to see the simple color labels of products. Our goal is to eliminate confusion surrounding the colors of products when shopping online by providing simple color labels. ",
   "version": "1.0",
-   "icons": {
+  "icons": {
     "16": "/images/16-1.png",
     "19": "/images/19-1.png",
     "32": "/images/32-1.png",
@@ -31,18 +31,19 @@
     }
   ],
   "commands": {
-    "toggle": {
+    "toggleTool": {
       "suggested_key": {
         "default": "Alt+Shift+W",
         "mac": "Alt+Shift+W"
-      }, "description": "Toggle tool"
+      }, 
+      "description": "Toggle tool"
     },
-      "labels": {
+      "removeLabels": {
       "suggested_key": {
         "default": "Alt+Shift+R",
         "mac": "Alt+Shift+R"
       },
-     "description": "remove labels"
+      "description": "Remove Labels"
     },
     "_execute_action": {
       "suggested_key": {
@@ -52,7 +53,6 @@
     }
   },
   "action": {
-
     "default_popup": "popup/popup.html"
   }
 

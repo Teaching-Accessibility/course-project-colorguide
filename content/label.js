@@ -36,7 +36,7 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	 closeButton.style.padding= "4px";
+	closeButton.style.padding= "4px";
 	
 
 	closeButton.className = "colorlabel_child";
@@ -89,13 +89,13 @@ function addContent (label, content) {
 
 	if (content.length <= 6 ){
 		textContent.style.fontSize = "18px";
-	 textContent.style.paddingTop = "25%";
-	 textContent.style.paddingLeft= "20%";
+		textContent.style.paddingTop = "25%";
+		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	} else{
 		textContent.style.fontSize = "18px";
-	 textContent.style.paddingTop = "10%";
-	 textContent.style.paddingLeft= "20%";
+		textContent.style.paddingTop = "10%";
+		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	}
 	//  textContent.style.paddingLeft = "1.5%";
@@ -121,7 +121,7 @@ function createMinimizedLabel (top, left, label) {
 	newMinimizedLabel.style.cursor  = "pointer";
 	newMinimizedLabel.style.display = "none"
 
-	newMinimizedLabel.className = "colorlabel_child";
+	newMinimizedLabel.className = "colorlabel";
 
 	let maximizeButton = document.createElement("p");
 
@@ -172,7 +172,7 @@ function createStatusLabel () {
 	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
-
+	newStatusLabel.id = "statuslabel"
 	newStatusLabel.className = "colorlabel";
 
 	addCloseButton (newStatusLabel)

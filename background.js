@@ -1,24 +1,12 @@
-// Keep tracks if tool is on or off
-let on = false
-
-// Listen to short-cut command (Ctrl+Shift+1)
-// and turn on/off
+// Listen to short-cut commands:
+// Toggle Tool
+// Remove Labels
 chrome.commands.onCommand.addListener((command) => {
-	if (command === 'toggle'){
-		on = !on
+	if (command === 'toggleTool' || command === 'removeLabels'){
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-			chrome.tabs.sendMessage(tabs[0].id, {toggleOn: on? "true":"false"});
+			chrome.tabs.sendMessage(tabs[0].id, {message: command});
         })
 	}
-});
-
-chrome.commands.onCommand.addListener((command) => {
-	if (command === 'labels'){
-		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-			chrome.tabs.sendMessage(tabs[0].id, {labelRemove: on? "true":"false"});
-        })
-	}
-		
 });
 
 
@@ -30,19 +18,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		});
 	}
 	// This is similar to command, but from the popup.js 
-	else if (request.message === 'toggle'){
-		on = !on
+	else if (request.message === 'toggleTool'){
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-			chrome.tabs.sendMessage(tabs[0].id, {toggleOn: on? "true":"false"});
+			chrome.tabs.sendMessage(tabs[0].id, {message: request.message});
         })
+		return true;
 	}
 	return true;
 });
-
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-	if (on){
-		on = false;
-	}
-});
-
-

@@ -12,6 +12,6 @@
     };    
 })();
 document.getElementById('start-button').addEventListener('click', () => {
-    chrome.runtime.sendMessage({message: 'toggle'});
+    chrome.runtime.sendMessage({message: 'toggleTool'});
     window.close();
 });
