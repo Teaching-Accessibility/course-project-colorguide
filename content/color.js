@@ -6,6 +6,9 @@ function colorNameTranslate(r,g,b){
 	let lightness = hsl[2];
 	let dark = false;
 	let light = false;
+	console.log(hue);
+	console.log(saturation);
+	console.log(lightness);
 
 	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
 		dark = true;
@@ -64,7 +67,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Orange";
 	} 
-	else if ((45 <= hue && hue <= 74) && 12 <= saturation){
+	else if ((45 <= hue && hue <= 58) && 12 <= saturation){
 		if (dark){
 			return "Dark Yellow";
 		}
@@ -73,7 +76,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Yellow";
 	}
-	else if ((75 <= hue && hue <= 144) && 12 <= saturation){
+	else if ((59 <= hue && hue <= 144) && 12 <= saturation){
 		if (dark){
 			return "Dark Green";
 		}
