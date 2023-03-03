@@ -17,7 +17,6 @@ function createLabel(top, left, content) {
     newLabel.id = "ColorLabel" + count;
     newLabel.className = "colorlabel";
 
-	
     count ++;
 
 	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
@@ -241,7 +240,7 @@ function createStatusLabelOff (content) {
 	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
-	newStatusLabel.id = "statuslabel"
+	newStatusLabel.id = "statuslabel";
 	newStatusLabel.className = "colorlabel";
 
 	addCloseButton (newStatusLabel)
@@ -253,7 +252,6 @@ function createStatusLabelOff (content) {
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "2%";
-
 	textContent.className = "colorlabel_child";
 	textContent.appendChild(document.createTextNode(content));
 

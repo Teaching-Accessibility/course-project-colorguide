@@ -28,6 +28,19 @@ function captureCurrentPixel(e) {
 		}
 	});
 }
+function toggleStatusOff(e) {
+	if (e.target.id = "statuslabel") {
+		toggleOff();
+	}
+
+}
+
+function toggleStatusOn(e) {
+	if (e.target.id = "statuslabel") {
+		toggleOn();
+	}
+
+}
 
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
@@ -37,6 +50,7 @@ const toggleOn = () => {
 		children[i].style['pointer-events'] = 'none';
 	}
 	addStatusLabel ();
+	document.addEventListener("dblclick", toggleStatusOff);
 	document.addEventListener("click", captureCurrentPixel, false);
 }
 
@@ -48,8 +62,10 @@ const toggleOff = () => {
 		children[i].style['pointer-events'] = 'auto';
 	}
 	document.body.style.cursor = "default";
+	alert('toggle off now');
 	removeStatusLabel ();
 	addStatusOffLabel ();
+	document.addEventListener("dblclick", toggleStatusOn);
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
