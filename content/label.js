@@ -1,4 +1,5 @@
-let statusLabel = createStatusLabel ();
+let statusLabel = createStatusLabel ("Tool Turned On");
+let statusLabelOff = createStatusLabel ("Tool Turned Off");
 let count = 0
 
 function createLabel(top, left, content) {
@@ -23,8 +24,8 @@ function createLabel(top, left, content) {
 
 	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
-	addCircle(newLabel, top, left);
-	addContent(newLabel, content,);
+	// addCircle(newLabel, top, left);
+	addContent(newLabel, content);
 
 	document.body.appendChild(newLabel);
 	document.body.appendChild(newMinimizedLabel);
@@ -64,9 +65,9 @@ function addCircle(label, top, left) {
 		console.log(top);
     circle.style.left = left;
     circle.style.zIndex = "999999999999999";
-		circle.style.height = "5px";
-		circle.style.width = "5px";
-		circle.style.backgroundColor = "#fffd22";
+		circle.style.height = "10px";
+		circle.style.width = "10px";
+		circle.style.backgroundColor = "#D3D3D3";
 		circle.style.outlineColor = "black";
 		circle.style.borderRadius = "50%";
 	 circle.className = "colorlabel_child";
@@ -181,7 +182,21 @@ function toggleDiv(div1, div2)
 	}
 } 
 
-function createStatusLabel () {
+function toggleLabel(div1, div2)
+{
+	if(div1.style.display == 'none')
+	{
+		div2.style.display = 'none';
+		div1.style.display = 'block';
+	}
+	else
+	{  
+		div1.style.display = 'none';
+		div2.style.display = 'block'
+	}
+} 
+
+function createStatusLabel (content) {
 	let newStatusLabel = document.createElement('div'); 
 
 	newStatusLabel.style.background = "#D3D3D3";
@@ -197,7 +212,39 @@ function createStatusLabel () {
 	newStatusLabel.className = "colorlabel";
 
 	addCloseButton (newStatusLabel)
-	let content =  "Tool Turned On";
+	let textContent = document.createElement("p");
+
+	textContent.style.color = "#000000";
+	textContent.style.textAlign ="center";
+	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
+	textContent.style.margin = "auto";
+	textContent.style.fontSize = "18px";
+	textContent.style.paddingTop = "2%";
+
+	textContent.className = "colorlabel_child";
+	textContent.appendChild(document.createTextNode(content));
+
+	newStatusLabel.appendChild(textContent);
+
+	return newStatusLabel
+}
+
+function createStatusLabelOff (content) {
+	let newStatusLabel = document.createElement('div'); 
+
+	newStatusLabel.style.background = "#D3D3D3";
+	newStatusLabel.style.height = "30px";
+	newStatusLabel.style.width = "200px";
+	newStatusLabel.style.position = "fixed";
+	newStatusLabel.style.top = "0px";
+	newStatusLabel.style.right = "0px";
+	newStatusLabel.style.zIndex = "999999999999999";
+	newStatusLabel.style.display = "none";
+	newStatusLabel.style.cursor  = "pointer";
+	newStatusLabel.id = "statuslabel"
+	newStatusLabel.className = "colorlabel";
+
+	addCloseButton (newStatusLabel)
 	let textContent = document.createElement("p");
 
 	textContent.style.color = "#000000";
@@ -217,12 +264,17 @@ function createStatusLabel () {
 
 function addStatusLabel () {
 	statusLabel.style.display = "block";
+	// statusLabel.style.height = "100px";
 	document.body.appendChild(statusLabel);
+}
+
+function addStatusOffLabel () {
+	statusLabelOff.style.display = "block";
+	document.body.appendChild(statusLabelOff);
 }
 
 function removeStatusLabel () {
 	if (statusLabel.style.display === "none") return;
-
 	statusLabel.style.display = "none";
 	statusLabel.parentNode.removeChild(statusLabel);
 }

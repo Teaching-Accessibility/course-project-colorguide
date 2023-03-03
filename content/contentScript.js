@@ -49,11 +49,12 @@ const toggleOff = () => {
 	}
 	document.body.style.cursor = "default";
 	removeStatusLabel ();
+	addStatusOffLabel ();
 	document.removeEventListener('click', captureCurrentPixel, false);
 }
 
 
-// buggy functionality for removing all tags with alt shift r
+
 const labelRemove = () => {
 	// removeStatusLabel ();
 	const labels = Array.prototype.slice.call(document.getElementsByClassName("colorlabel"), 0);
