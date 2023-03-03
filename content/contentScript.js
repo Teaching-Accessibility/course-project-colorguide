@@ -23,7 +23,7 @@ function captureCurrentPixel(e) {
 			// if (window.innerWidth - e.clientX > 100px){
 			// 	 offset creation
 			// }
-		
+			
 			createLabel (e.pageY + 'px', e.pageX + 'px', 	colorName )
 		}
 	});

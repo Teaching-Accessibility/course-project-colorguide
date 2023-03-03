@@ -7,21 +7,24 @@ function createLabel(top, left, content) {
     newLabel.style.position = 'absolute';
     newLabel.style.top = top;
     newLabel.style.left = left;
-    newLabel.style.zIndex = "999999999999999";
+    newLabel.style.zIndex = "999999999999997";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
     newLabel.style.width = "100px";
-    newLabel.style.height = "60px";
+    newLabel.style.height = "65px";
     newLabel.id = "ColorLabel" + count;
     newLabel.className = "colorlabel";
+
+	
     count ++;
 
 	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
 
 	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
-	addContent(newLabel, content);
+	addCircle(newLabel, top, left);
+	addContent(newLabel, content,);
 
 	document.body.appendChild(newLabel);
 	document.body.appendChild(newMinimizedLabel);
@@ -51,6 +54,24 @@ function addCloseButton(label) {
 	closeButton.appendChild(closeSymbol);
 
 	label.appendChild(closeButton);
+}
+
+function addCircle(label, top, left) {
+	let circle = document.createElement("p");
+	//	circle.style.position = 'absolute';
+
+    circle.style.top = top;
+		console.log(top);
+    circle.style.left = left;
+    circle.style.zIndex = "999999999999999";
+		circle.style.height = "5px";
+		circle.style.width = "5px";
+		circle.style.backgroundColor = "#fffd22";
+		circle.style.outlineColor = "black";
+		circle.style.borderRadius = "50%";
+	 circle.className = "colorlabel_child";
+
+	label.appendChild(circle);
 }
 
 
