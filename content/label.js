@@ -5,29 +5,30 @@ let count = 0
 
 function createLabel(top, left, content) {
     let newLabel = document.createElement('div');
-    
+
     newLabel.style.position = 'absolute';
-    newLabel.style.top = top;
-    newLabel.style.left = left;
     newLabel.style.zIndex = "999999999999997";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
     newLabel.style.width = "100px";
     newLabel.style.height = "65px";
+	newLabel.style.border = "1px solid black";
     newLabel.id = "ColorLabel" + count;
+    count ++;
     newLabel.className = "colorlabel";
 
-    count ++;
+	newLabel.style.top = top +5 + "px";
+    newLabel.style.left = left +5 + "px";
 
-	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
-
+	addCircle(newLabel, top + "px", left + "px");
+	
 	addMinimizeButton(newLabel, () => {toggleLabel(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
-	// addCircle(newLabel, top, left);
 	addContent(newLabel, content);
-
 	document.body.appendChild(newLabel);
+
+	let newMinimizedLabel = createMinimizedLabel (top+ "px", left+ "px", newLabel);
 	document.body.appendChild(newMinimizedLabel);
 }
 
@@ -59,17 +60,17 @@ function addCloseButton(label) {
 
 function addCircle(label, top, left) {
 	let circle = document.createElement("p");
-	//	circle.style.position = 'absolute';
+	circle.style.position = 'relative';
 
-    circle.style.top = top;
-		console.log(top);
-    circle.style.left = left;
+    circle.style.top = "-10px";
+    circle.style.left = "-10px";
     circle.style.zIndex = "999999999999999";
-		circle.style.height = "10px";
-		circle.style.width = "10px";
-		circle.style.backgroundColor = "#D3D3D3";
-		circle.style.outlineColor = "black";
-		circle.style.borderRadius = "50%";
+	circle.style.height = "10px";
+	circle.style.width = "10px";
+	// circle.style.backgroundColor = "#D3D3D3";
+	// circle.style.outlineColor = "black";
+	circle.style.border = "1px solid black";
+	circle.style.borderRadius = "50%";
 	circle.className = "colorlabel_child";
 
 	label.appendChild(circle);
