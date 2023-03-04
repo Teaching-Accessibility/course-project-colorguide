@@ -6,9 +6,8 @@ function colorNameTranslate(r,g,b){
 	let lightness = hsl[2];
 	let dark = false;
 	let light = false;
-	console.log(hue);
-	console.log(saturation);
-	console.log(lightness);
+
+	console.log(`hue: ${hue}, saturation: ${saturation}, lightness: ${lightness}`);
 
 	if (((75 <= saturation && saturation <= 100) && (5 <= lightness && lightness <= 25) ) || ((0 <= saturation && saturation <= 74) && (10 <= lightness && lightness <= 40) )){
 		dark = true;

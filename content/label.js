@@ -1,5 +1,5 @@
-let statusLabelOn = createStatusLabel ("Tool Turned On");
-let statusLabelOff = createStatusLabel ("Tool Turned Off");
+let statusLabelOn = null;
+let statusLabelOff = null;
 
 let count = 0
 
@@ -70,7 +70,7 @@ function addCircle(label, top, left) {
 		circle.style.backgroundColor = "#D3D3D3";
 		circle.style.outlineColor = "black";
 		circle.style.borderRadius = "50%";
-	 circle.className = "colorlabel_child";
+	circle.className = "colorlabel_child";
 
 	label.appendChild(circle);
 }
@@ -194,7 +194,9 @@ function createStatusLabel (content) {
 	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
-//	newStatusLabel.id = "statuslabel"
+	// Stop text being chosen when dbl clicking
+	newStatusLabel.style.userSelect = "none"
+
 	newStatusLabel.className = "statuslabel";
 
 	addCloseButton (newStatusLabel)
@@ -218,17 +220,29 @@ function createStatusLabel (content) {
 function addStatusLabel () {
     statusLabelOn.style.display = "block";
     statusLabelOff.style.display = "none";
-    document.body.appendChild(statusLabelOn);
-    document.body.appendChild(statusLabelOff);
 }
 
 function removeStatusLabel () {
-	if (statusLabelOn.style.display !=== "none") {
-	    statusLabelOn.style.display = "none";
-	}
-    if (statusLabelOff.style.display !=== "none") {
-        statusLabelOff.style.display = "none";
-    }
-	statusLabelOn.parentNode.removeChild(statusLabelOn);
-	statusLabelOff.parentNode.removeChild(statusLabelOff);
+    statusLabelOn.style.display = "none";
+    statusLabelOff.style.display = "block";
+	setTimeout(() => { statusLabelOff.style.display = "none"; }, 2000);
+}
+
+function setupStatusLabel () {
+	statusLabelOn = createStatusLabel ("Tool Turned On");
+	statusLabelOff = createStatusLabel ("Tool Turned Off");
+	statusLabelOn.addEventListener("dblclick", (e) => {
+		e.preventDefault();
+		on = false
+		toggleOff ()
+	});
+
+	statusLabelOff.addEventListener("dblclick", (e) => {
+		e.preventDefault();
+		on = true
+		toggleOn ()
+	});
+
+	document.body.appendChild(statusLabelOn);
+    document.body.appendChild(statusLabelOff);
 }

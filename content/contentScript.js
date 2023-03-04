@@ -3,7 +3,9 @@ let tempCanvas = document.createElement('canvas');
 let tempContext = tempCanvas.getContext('2d', { willReadFrequently: true });
 
 function captureCurrentPixel(e) {
-	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child" || e.target.className === "statuslabel") {
+	if (e.target.className === "colorlabel" 
+		|| e.target.className === "colorlabel_child" 
+		|| e.target.className === "statuslabel") {
 		return;
 	}
 
@@ -28,56 +30,53 @@ function captureCurrentPixel(e) {
 		}
 	});
 }
-function toggleStatusOff(e) {
-	statusLabelOn
-
-}
-
-function toggleStatusOn(e) {
-	if (e.target.className = "statuslabel") {
-		toggleOn();
-	}
-
-}
 
 const toggleOn = () => {
 	for (let i = 0; i < children.length; i++) {
-		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+		if (children[i].className === "colorlabel" 
+			|| children[i].className === "colorlabel_child"
+			|| children[i].className === "statuslabel") {
 			continue;
 		}
 		children[i].style['pointer-events'] = 'none';
 	}
+
+	if (statusLabelOn === null) {
+		setupStatusLabel ();
+	}
 	addStatusLabel ();
-	document.addEventListener("dblclick", toggleStatusOff);
 	document.addEventListener("click", captureCurrentPixel, false);
+
+	console.log(`Tool turned on`)
 }
 
 const toggleOff = () => {
 	for (let i = 0; i < children.length; i++) {
-		if (children[i].className === "colorlabel" || children[i].className === "colorlabel_child") {
+		if (children[i].className === "colorlabel" 
+			|| children[i].className === "colorlabel_child"
+			|| children[i].className === "statuslabel") {
 			continue;
 		}
 		children[i].style['pointer-events'] = 'auto';
 	}
-	document.body.style.cursor = "default";
-	alert('toggle off now');
+
 	removeStatusLabel ();
-	addStatusOffLabel ();
-	document.addEventListener("dblclick", toggleStatusOn);
+	document.body.style.cursor = "default";
 	document.removeEventListener('click', captureCurrentPixel, false);
+
+	console.log(`Tool turned off`)
 }
 
-
-
 const labelRemove = () => {
-	// removeStatusLabel ();
+	let count = 0
 	const labels = Array.prototype.slice.call(document.getElementsByClassName("colorlabel"), 0);
 	for (const label of labels) {
 		if (label.className === "statuslabel") continue;
 		label.parentNode.removeChild(label);
+		count++
 	}
 
-	console.log (`Deleted ${labels.length} labels`)
+	console.log (`Deleted ${count} labels`)
 }
 
 // Status of tool
@@ -87,10 +86,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 		on = !on
 		if (on) {
 			toggleOn ()
-			console.log(`Tool turned on`)
 		} else {
 			toggleOff ()
-			console.log(`Tool turned off`)
 		}
 	} else if (request.message === 'removeLabels') {
 		labelRemove()
