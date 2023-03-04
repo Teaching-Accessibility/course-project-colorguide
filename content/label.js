@@ -3,7 +3,7 @@ let statusLabelOff = null;
 
 let count = 0
 
-function createLabel(top, left, content) {
+function createLabel(x, y, content) {
     let newLabel = document.createElement('div');
 
     newLabel.style.position = 'absolute';
@@ -18,20 +18,72 @@ function createLabel(top, left, content) {
     count ++;
     newLabel.className = "colorlabel";
 
-	newLabel.style.top = top +5 + "px";
-    newLabel.style.left = left +5 + "px";
+	newLabelPosition = labelPosition (x, y, newLabel.style.width, newLabel.style.height)
 
-	addCircle(newLabel, top + "px", left + "px");
-	
+	// All the +5 -5 are = (size of circle lable) /2
+	switch (newLabelPosition) {
+		case 'top left':
+			newLabel.style.top = x - parseInt(newLabel.style.height) - 5 + "px";
+			newLabel.style.left =  y - parseInt(newLabel.style.width) - 5 + "px";
+			addCircle(newLabel, parseInt(newLabel.style.height) + "px",  parseInt(newLabel.style.width) + "px");
+			break;
+		case 'top right':
+			newLabel.style.top = x - parseInt(newLabel.style.height) - 5 + "px";
+			newLabel.style.left = y + 5 + "px";
+			addCircle(newLabel, parseInt(newLabel.style.height) + "px", "-10px");
+			break;
+		case 'bottom left':
+			newLabel.style.top = x + 5 + "px";
+			newLabel.style.left = y - parseInt(newLabel.style.width) - 5 + "px";
+			addCircle(newLabel, "-10px", parseInt(newLabel.style.width) + "px");
+			break;
+		case 'bottom right':
+			newLabel.style.top = x + 5 + "px";
+			newLabel.style.left = y + 5 + "px";
+			addCircle(newLabel, "-10px", "-10px");
+			break;
+		default:
+			console.log(`Something wrong with label position`);
+	}
+
+
+
 	addMinimizeButton(newLabel, () => {toggleLabel(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
 	addContent(newLabel, content);
 	document.body.appendChild(newLabel);
 
-	let newMinimizedLabel = createMinimizedLabel (top+ "px", left+ "px", newLabel);
+	let newMinimizedLabel = createMinimizedLabel (x + "px", y + "px", newLabel);
 	document.body.appendChild(newMinimizedLabel);
 }
 
+function labelPosition(top, left, width, height) {
+	top = parseInt(top)
+	left = parseInt(left)
+	width = parseInt(width)
+	height = parseInt(height)
+	let pageWidth  = document.documentElement.scrollWidth;
+	let pageHeight = document.documentElement.scrollHeight;
+
+	result = ""
+	upperSide = (top + height) > pageHeight
+	leftSide = (left + width) > pageWidth
+	if (upperSide) {
+		result += "top"
+	} else {
+		result += "bottom"
+	}
+	result += " "
+	if (leftSide) {
+		result += "left"
+	} else {
+		result += "right"
+	}
+
+	// console.log (result)
+
+	return result
+}
 
 function addCloseButton(label) {
 	let closeButton = document.createElement("p");
@@ -62,8 +114,8 @@ function addCircle(label, top, left) {
 	let circle = document.createElement("p");
 	circle.style.position = 'relative';
 
-    circle.style.top = "-10px";
-    circle.style.left = "-10px";
+    circle.style.top = top;
+    circle.style.left = left;
     circle.style.zIndex = "999999999999999";
 	circle.style.height = "10px";
 	circle.style.width = "10px";
