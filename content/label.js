@@ -1,5 +1,6 @@
-let statusLabel = createStatusLabel ("Tool Turned On");
+let statusLabelOn = createStatusLabel ("Tool Turned On");
 let statusLabelOff = createStatusLabel ("Tool Turned Off");
+
 let count = 0
 
 function createLabel(top, left, content) {
@@ -21,7 +22,7 @@ function createLabel(top, left, content) {
 
 	let newMinimizedLabel = createMinimizedLabel (top, left, newLabel);
 
-	addMinimizeButton(newLabel, () => {toggleDiv(newMinimizedLabel, newLabel)});
+	addMinimizeButton(newLabel, () => {toggleLabel(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
 	// addCircle(newLabel, top, left);
 	addContent(newLabel, content);
@@ -158,7 +159,7 @@ function createMinimizedLabel (top, left, label) {
 	//maximizeButton.style.fontWeight = "normal";
 	
 	maximizeButton.className = "colorlabel_child";
-	maximizeButton.onclick = () => {toggleDiv(newMinimizedLabel, label)}
+	maximizeButton.onclick = () => {toggleLabel(newMinimizedLabel, label)}
 
 	let  maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
@@ -167,31 +168,17 @@ function createMinimizedLabel (top, left, label) {
 	return newMinimizedLabel
 }
 
-function toggleDiv(div1, div2)
+function toggleLabel(label1, label2)
 {
-	if(div1.style.display == 'none')
+	if(label1.style.display == 'none')
 	{
-		div2.style.display = 'none';
-		div1.style.display = 'block';
+		label2.style.display = 'none';
+		label1.style.display = 'block';
 	}
 	else
 	{  
-		div1.style.display = 'none';
-		div2.style.display = 'block'
-	}
-} 
-
-function toggleLabel(div1, div2)
-{
-	if(div1.style.display == 'none')
-	{
-		div2.style.display = 'none';
-		div1.style.display = 'block';
-	}
-	else
-	{  
-		div1.style.display = 'none';
-		div2.style.display = 'block'
+		label1.style.display = 'none';
+		label2.style.display = 'block'
 	}
 } 
 
@@ -207,8 +194,8 @@ function createStatusLabel (content) {
 	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
-	newStatusLabel.id = "statuslabel"
-	newStatusLabel.className = "colorlabel";
+//	newStatusLabel.id = "statuslabel"
+	newStatusLabel.className = "statuslabel";
 
 	addCloseButton (newStatusLabel)
 	let textContent = document.createElement("p");
@@ -220,38 +207,6 @@ function createStatusLabel (content) {
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "2%";
 
-	textContent.className = "colorlabel_child";
-	textContent.appendChild(document.createTextNode(content));
-
-	newStatusLabel.appendChild(textContent);
-
-	return newStatusLabel
-}
-
-function createStatusLabelOff (content) {
-	let newStatusLabel = document.createElement('div'); 
-
-	newStatusLabel.style.background = "#D3D3D3";
-	newStatusLabel.style.height = "30px";
-	newStatusLabel.style.width = "200px";
-	newStatusLabel.style.position = "fixed";
-	newStatusLabel.style.top = "0px";
-	newStatusLabel.style.right = "0px";
-	newStatusLabel.style.zIndex = "999999999999999";
-	newStatusLabel.style.display = "none";
-	newStatusLabel.style.cursor  = "pointer";
-	newStatusLabel.id = "statuslabel";
-	newStatusLabel.className = "colorlabel";
-
-	addCloseButton (newStatusLabel)
-	let textContent = document.createElement("p");
-
-	textContent.style.color = "#000000";
-	textContent.style.textAlign ="center";
-	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
-	textContent.style.margin = "auto";
-	textContent.style.fontSize = "18px";
-	textContent.style.paddingTop = "2%";
 	textContent.className = "colorlabel_child";
 	textContent.appendChild(document.createTextNode(content));
 
@@ -261,18 +216,19 @@ function createStatusLabelOff (content) {
 }
 
 function addStatusLabel () {
-	statusLabel.style.display = "block";
-	// statusLabel.style.height = "100px";
-	document.body.appendChild(statusLabel);
-}
-
-function addStatusOffLabel () {
-	statusLabelOff.style.display = "block";
-	document.body.appendChild(statusLabelOff);
+    statusLabelOn.style.display = "block";
+    statusLabelOff.style.display = "none";
+    document.body.appendChild(statusLabelOn);
+    document.body.appendChild(statusLabelOff);
 }
 
 function removeStatusLabel () {
-	if (statusLabel.style.display === "none") return;
-	statusLabel.style.display = "none";
-	statusLabel.parentNode.removeChild(statusLabel);
+	if (statusLabelOn.style.display !=== "none") {
+	    statusLabelOn.style.display = "none";
+	}
+    if (statusLabelOff.style.display !=== "none") {
+        statusLabelOff.style.display = "none";
+    }
+	statusLabelOn.parentNode.removeChild(statusLabelOn);
+	statusLabelOff.parentNode.removeChild(statusLabelOff);
 }

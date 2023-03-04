@@ -3,7 +3,7 @@ let tempCanvas = document.createElement('canvas');
 let tempContext = tempCanvas.getContext('2d', { willReadFrequently: true });
 
 function captureCurrentPixel(e) {
-	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child") {
+	if (e.target.className === "colorlabel" || e.target.className === "colorlabel_child" || e.target.className === "statuslabel") {
 		return;
 	}
 
@@ -23,20 +23,18 @@ function captureCurrentPixel(e) {
 			// if (window.innerWidth - e.clientX > 100px){
 			// 	 offset creation
 			// }
-			
+
 			createLabel (e.pageY + 'px', e.pageX + 'px', 	colorName )
 		}
 	});
 }
 function toggleStatusOff(e) {
-	if (e.target.id = "statuslabel") {
-		toggleOff();
-	}
+	statusLabelOn
 
 }
 
 function toggleStatusOn(e) {
-	if (e.target.id = "statuslabel") {
+	if (e.target.className = "statuslabel") {
 		toggleOn();
 	}
 
@@ -75,7 +73,7 @@ const labelRemove = () => {
 	// removeStatusLabel ();
 	const labels = Array.prototype.slice.call(document.getElementsByClassName("colorlabel"), 0);
 	for (const label of labels) {
-		if (label.id === "statuslabel") continue;
+		if (label.className === "statuslabel") continue;
 		label.parentNode.removeChild(label);
 	}
 
