@@ -92,12 +92,15 @@ function addCloseButton(label) {
 	let closeButton = document.createElement("p");
 
 	closeButton.style.float = "right";
+	 closeButton.style.position = "absolute";
+  closeButton.style.right = 0 +'px';
+  closeButton.style.top = 0 +'px';
 	closeButton.style.display ="inline";
 	closeButton.style.color = "#000000";
 	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	//closeButton.style.paddingRight= "4px";
-	closeButton.style.paddingBottom = "10px";
+	closeButton.style.paddingRight= "4px";
+	closeButton.style.paddingTop = "0px";
 	
 
 	closeButton.className = "colorlabel_child";
@@ -118,13 +121,16 @@ function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 
 	minimizeButton.style.float = "left";
+	minimizeButton.style.position = "absolute";
+  minimizeButton.style.left = 0 +'px';
+  minimizeButton.style.top = 0 +'px';
 	minimizeButton.style.display ="inline";
 	minimizeButton.style.color = "#000000";
 	minimizeButton.style.margin = "auto";
 	minimizeButton.style.fontSize = "15px";
 	minimizeButton.style.fontWeight = "normal";
-//	minimizeButton.style.paddingLeft = "5px";
-	minimizeButton.style.paddingBottom = "10px";
+	minimizeButton.style.paddingLeft = "5px";
+	minimizeButton.style.paddingTop = "0px";
 
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
