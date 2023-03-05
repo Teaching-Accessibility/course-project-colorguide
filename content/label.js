@@ -11,7 +11,7 @@ function createLabel(x, y, content) {
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
-    newLabel.style.width = "100px";
+    newLabel.style.width = "120px";
     newLabel.style.height = "65px";
 	newLabel.style.border = "1px solid black";
     newLabel.id = "ColorLabel" + count;
@@ -114,13 +114,11 @@ function addCircle(label, top, left) {
 	let circle = document.createElement("p");
 	circle.style.position = 'relative';
 
-    circle.style.top = top;
-    circle.style.left = left;
-    circle.style.zIndex = "999999999999999";
-	circle.style.height = "10px";
-	circle.style.width = "10px";
-	// circle.style.backgroundColor = "#D3D3D3";
-	// circle.style.outlineColor = "black";
+  circle.style.top = top;
+  circle.style.left = left;
+  circle.style.zIndex = "999999999999999";
+	circle.style.height = "11.25px";
+	circle.style.width = "11.25px";
 	circle.style.border = "1px solid black";
 	circle.style.borderRadius = "50%";
 	circle.className = "colorlabel_child";
@@ -163,19 +161,18 @@ function addContent (label, content) {
 	textContent.style.margin = "auto";
 
 	if (content.length <= 6 ){
+		console.log(content);
 		textContent.style.fontSize = "18px";
-		textContent.style.paddingTop = "25%";
+		textContent.style.paddingTop = "5%";
 		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
-	} else{
+	} else {
 		textContent.style.fontSize = "18px";
-		textContent.style.paddingTop = "10%";
+		//textContent.style.paddingTop = "5%";
 		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	}
-	//  textContent.style.paddingLeft = "1.5%";
-	//  textContent.style.paddingRight = "1.5%";
-	///textContent.style.paddingBottom = "12%";
+
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.style.fontWeight = "normal";
 	textContent.className = "colorlabel_child";
