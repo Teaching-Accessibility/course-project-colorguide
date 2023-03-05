@@ -123,7 +123,7 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.float = "left";
 	minimizeButton.style.position = "absolute";
   minimizeButton.style.left = 0 +'px';
-  minimizeButton.style.top = 0 +'px';
+  minimizeButton.style.top = -1 +'px';
 	minimizeButton.style.display ="inline";
 	minimizeButton.style.color = "#000000";
 	minimizeButton.style.margin = "auto";
@@ -153,8 +153,8 @@ function addCircle(label, top, left) {
   circle.style.top = top;
   circle.style.left = left;
   circle.style.zIndex = "999999999999999";
-	circle.style.height = "11.25px";
-	circle.style.width = "11.25px";
+	circle.style.height = "11.5px";
+	circle.style.width = "11.5px";
 	circle.style.border = "1px solid black";
 	circle.style.borderRadius = "50%";
 	circle.className = "colorlabel_child";
