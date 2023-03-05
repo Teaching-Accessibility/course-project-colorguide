@@ -4,10 +4,12 @@ let statusLabelOff = null;
 let count = 0
 
 function createLabel(x, y, content) {
+	console.log(`x-click: ${x}, y-click: ${y}`);
     let newLabel = document.createElement('div');
 
     newLabel.style.position = 'absolute';
     newLabel.style.zIndex = "999999999999997";
+		newLabel.style.borderRadius = "3px";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
@@ -30,17 +32,17 @@ function createLabel(x, y, content) {
 		case 'top right':
 			newLabel.style.top = x - parseInt(newLabel.style.height) - 5 + "px";
 			newLabel.style.left = y + 5 + "px";
-			addCircle(newLabel, parseInt(newLabel.style.height) + "px", "-10px");
+			addCircle(newLabel, parseInt(newLabel.style.height) + "px", "-11.25px");
 			break;
 		case 'bottom left':
 			newLabel.style.top = x + 5 + "px";
 			newLabel.style.left = y - parseInt(newLabel.style.width) - 5 + "px";
-			addCircle(newLabel, "-10px", parseInt(newLabel.style.width) + "px");
+			addCircle(newLabel, "-11.25px", parseInt(newLabel.style.width) + "px");
 			break;
 		case 'bottom right':
 			newLabel.style.top = x + 5 + "px";
 			newLabel.style.left = y + 5 + "px";
-			addCircle(newLabel, "-10px", "-10px");
+			addCircle(newLabel, "-11.25px", "-11.25px");
 			break;
 		default:
 			console.log(`Something wrong with label position`);
@@ -58,6 +60,7 @@ function createLabel(x, y, content) {
 }
 
 function labelPosition(top, left, width, height) {
+	console.log(`label top: ${top}, label left: ${left}`);
 	top = parseInt(top)
 	left = parseInt(left)
 	width = parseInt(width)
@@ -93,7 +96,8 @@ function addCloseButton(label) {
 	closeButton.style.color = "#000000";
 	closeButton.style.margin = "auto";
 	closeButton.style.fontSize = "20px";
-	closeButton.style.padding= "4px";
+	//closeButton.style.paddingRight= "4px";
+	closeButton.style.paddingBottom = "10px";
 	
 
 	closeButton.className = "colorlabel_child";
@@ -110,22 +114,6 @@ function addCloseButton(label) {
 	label.appendChild(closeButton);
 }
 
-function addCircle(label, top, left) {
-	let circle = document.createElement("p");
-	circle.style.position = 'relative';
-
-  circle.style.top = top;
-  circle.style.left = left;
-  circle.style.zIndex = "999999999999999";
-	circle.style.height = "11.25px";
-	circle.style.width = "11.25px";
-	circle.style.border = "1px solid black";
-	circle.style.borderRadius = "50%";
-	circle.className = "colorlabel_child";
-
-	label.appendChild(circle);
-}
-
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 
@@ -135,8 +123,8 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.margin = "auto";
 	minimizeButton.style.fontSize = "15px";
 	minimizeButton.style.fontWeight = "normal";
-	minimizeButton.style.padding = "5px";
-	minimizeButton.style.paddingBottom = "6px";
+//	minimizeButton.style.paddingLeft = "5px";
+	minimizeButton.style.paddingBottom = "10px";
 
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
@@ -150,6 +138,24 @@ function addMinimizeButton(label, func) {
 	label.appendChild( minimizeButton);
 }
 
+function addCircle(label, top, left) {
+	console.log(`top: ${top}, left: ${left}`);
+	let circle = document.createElement("p");
+	circle.style.position = 'relative';
+	circle.style.margin = "0px";
+
+  circle.style.top = top;
+  circle.style.left = left;
+  circle.style.zIndex = "999999999999999";
+	circle.style.height = "11.25px";
+	circle.style.width = "11.25px";
+	circle.style.border = "1px solid black";
+	circle.style.borderRadius = "50%";
+	circle.className = "colorlabel_child";
+
+	label.appendChild(circle);
+}
+
 function addContent (label, content) {
 	let textContent = document.createElement("p");
 
@@ -160,13 +166,14 @@ function addContent (label, content) {
 	if (content.length <= 6 ){
 		console.log(content);
 		textContent.style.fontSize = "18px";
-		textContent.style.paddingTop = "5%";
+	textContent.style.paddingTop = "5%";
 		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	} else {
 		textContent.style.fontSize = "18px";
 		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
+
 	}
 
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
