@@ -9,7 +9,7 @@ function createLabel(x, y, content) {
 
     newLabel.style.position = 'absolute';
     newLabel.style.zIndex = "999999999999997";
-		newLabel.style.borderRadius = "3px";
+		newLabel.style.borderRadius = "4px";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
@@ -169,18 +169,18 @@ function addContent (label, content) {
 	textContent.style.textAlign ="center";
 	textContent.style.margin = "auto";
 
-	if (content.length <= 6 ){
-		console.log(content);
+	// if (content.length <= 6 ){
+	// 	console.log(content);
 		textContent.style.fontSize = "18px";
-	textContent.style.paddingTop = "5%";
-		textContent.style.paddingLeft= "20%";
-		textContent.style.paddingRight = "20%";
-	} else {
-		textContent.style.fontSize = "18px";
-		textContent.style.paddingLeft= "20%";
-		textContent.style.paddingRight = "20%";
+	textContent.style.paddingTop = "12%";
+	//	textContent.style.paddingLeft= "20%";
+	//	textContent.style.paddingRight = "20%";
+	// } else {
+	// 	textContent.style.fontSize = "18px";
+	// 	textContent.style.paddingLeft= "20%";
+	// 	textContent.style.paddingRight = "20%";
 
-	}
+	// }
 
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.style.fontWeight = "normal";
