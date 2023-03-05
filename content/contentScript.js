@@ -19,12 +19,7 @@ function captureCurrentPixel(e) {
 			tempContext.drawImage(img, 0, 0);
             tempContext.setAtt
 			let colorName = getColor(e.clientX * window.devicePixelRatio, e.clientY * window.devicePixelRatio);
-			
-			// TODO make it so tags cant go off screen
-			// label width: 100px, label height 60px or 80px
-			// if (window.innerWidth - e.clientX > 100px){
-			// 	 offset creation
-			// }
+
 			
 			createLabel (e.pageY, e.pageX , colorName )
 		}

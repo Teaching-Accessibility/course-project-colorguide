@@ -3,7 +3,6 @@
 // Remove Labels
 chrome.commands.onCommand.addListener((command) => {
 	if (command === 'toggleTool' || command === 'removeLabels'){
-		console.log("tin its broken :(");
 		chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
 			chrome.tabs.sendMessage(tabs[0].id, {message: command});
         })

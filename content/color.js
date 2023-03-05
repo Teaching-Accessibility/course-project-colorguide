@@ -117,9 +117,7 @@ function colorNameTranslate(r,g,b){
 // 0 <= Hue <= 100
 // 10 <= Saturation <= 49 
 // Any lightness that doesn’t qualify it as black or white
-	// console.log(hue);
-	// console.log(saturation);
-	// console.log(lightness);
+
 	return "Unknown"
 }
 
@@ -135,7 +133,7 @@ function getColor(x, y) {
 		n_shade_name = colorNameTranslate(red, green, blue);
 		listOfNames.push(n_shade_name)
 	}
-	console.log (listOfNames)
+//	console.log (listOfNames)
 
 	let mostCommon = listOfNames.sort((a,b) =>
 		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length

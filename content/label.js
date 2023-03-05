@@ -80,7 +80,7 @@ function labelPosition(top, left, width, height) {
 		result += "right"
 	}
 
-	// console.log (result)
+
 
 	return result
 }
@@ -126,7 +126,6 @@ function addCircle(label, top, left) {
 	label.appendChild(circle);
 }
 
-
 function addMinimizeButton(label, func) {
 	let minimizeButton = document.createElement("p");
 
@@ -139,12 +138,10 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.padding = "5px";
 	minimizeButton.style.paddingBottom = "6px";
 
-
 	minimizeButton.className = "colorlabel_child";
 	minimizeButton.onclick = func;
 	minimizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
 	minimizeButton.style.fontWeight = "normal";
-
 
 	let minimizeSymbol = document.createTextNode("―");
 
@@ -168,7 +165,6 @@ function addContent (label, content) {
 		textContent.style.paddingRight = "20%";
 	} else {
 		textContent.style.fontSize = "18px";
-		//textContent.style.paddingTop = "5%";
 		textContent.style.paddingLeft= "20%";
 		textContent.style.paddingRight = "20%";
 	}
@@ -198,7 +194,6 @@ function createMinimizedLabel (top, left, label) {
 	let maximizeButton = document.createElement("p");
 
 	maximizeButton.style.float = "left";
-	//maximizeButton.style.display ="inline-block;";
 	maximizeButton.style.color = "#ffffff";
 	maximizeButton.style.fontSize = "25px";
 	maximizeButton.style.marginTop = "0px";
@@ -206,7 +201,6 @@ function createMinimizedLabel (top, left, label) {
 	maximizeButton.style.padding = "5px";
 
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
-	//maximizeButton.style.fontWeight = "normal";
 	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleLabel(newMinimizedLabel, label)}
@@ -268,13 +262,13 @@ function createStatusLabel (content) {
 }
 
 function addStatusLabel () {
-    statusLabelOn.style.display = "block";
-    statusLabelOff.style.display = "none";
+  statusLabelOn.style.display = "block";
+  statusLabelOff.style.display = "none";
 }
 
 function removeStatusLabel () {
-    statusLabelOn.style.display = "none";
-    statusLabelOff.style.display = "block";
+  statusLabelOn.style.display = "none";
+  statusLabelOff.style.display = "block";
 	setTimeout(() => { statusLabelOff.style.display = "none"; }, 2000);
 }
 
@@ -294,5 +288,5 @@ function setupStatusLabel () {
 	});
 
 	document.body.appendChild(statusLabelOn);
-    document.body.appendChild(statusLabelOff);
+  document.body.appendChild(statusLabelOff);
 }
