@@ -21,28 +21,38 @@ function createLabel(x, y, content) {
     newLabel.className = "colorlabel";
 
 	newLabelPosition = labelPosition (x, y, newLabel.style.width, newLabel.style.height)
-
+	let maximizeX= x;
+	let maximizeY = y;
 	// All the +5 -5 are = (size of circle lable) /2
 	switch (newLabelPosition) {
 		case 'top left':
 			newLabel.style.top = x - parseInt(newLabel.style.height) - 5 + "px";
 			newLabel.style.left =  y - parseInt(newLabel.style.width) - 5 + "px";
 			addCircle(newLabel, parseInt(newLabel.style.height) + "px",  parseInt(newLabel.style.width) + "px");
+			maximizeX=  parseInt(newLabel.style.height) + "px";
+			maximizeY=   parseInt(newLabel.style.width) + "px";
 			break;
 		case 'top right':
 			newLabel.style.top = x - parseInt(newLabel.style.height) - 5 + "px";
 			newLabel.style.left = y + 5 + "px";
 			addCircle(newLabel, parseInt(newLabel.style.height) + "px", "-11.25px");
+			maximizeX=  parseInt(newLabel.style.height) + "px";
+			maximizeY= "-11.25px";
+			break;
 			break;
 		case 'bottom left':
 			newLabel.style.top = x + 5 + "px";
 			newLabel.style.left = y - parseInt(newLabel.style.width) - 5 + "px";
 			addCircle(newLabel, "-11.25px", parseInt(newLabel.style.width) + "px");
+			maximizeX=  "-11.25px";
+			maximizeY= parseInt(newLabel.style.width) + "px";
 			break;
 		case 'bottom right':
 			newLabel.style.top = x + 5 + "px";
 			newLabel.style.left = y + 5 + "px";
 			addCircle(newLabel, "-11.25px", "-11.25px");
+			maximizeX= "-11.25px";
+			maximizeY= "-11.25px";
 			break;
 		default:
 			console.log(`Something wrong with label position`);
@@ -50,12 +60,12 @@ function createLabel(x, y, content) {
 
 
 
+
 	addMinimizeButton(newLabel, () => {toggleLabel(newMinimizedLabel, newLabel)});
 	addCloseButton(newLabel);
 	addContent(newLabel, content);
 	document.body.appendChild(newLabel);
-
-	let newMinimizedLabel = createMinimizedLabel (x + "px", y + "px", newLabel);
+	let newMinimizedLabel = createMinimizedLabel (maximizeX, maximizeY, newLabel);
 	document.body.appendChild(newMinimizedLabel);
 }
 
@@ -192,11 +202,24 @@ function addContent (label, content) {
 }
 
 function createMinimizedLabel (top, left, label) {
+
+	// circle.style.position = 'relative';
+	// circle.style.margin = "0px";
+
+  // circle.style.top = top;
+  // circle.style.left = left;
+  // circle.style.zIndex = "999999999999999";
+	// circle.style.height = "11.5px";
+	// circle.style.width = "11.5px";
+	// circle.style.border = "1px solid black";
+	// circle.style.borderRadius = "50%";
+	// circle.className = "colorlabel_child";
 	let newMinimizedLabel = document.createElement('div');
 
-	newMinimizedLabel.style.position = 'absolute';
+	newMinimizedLabel.style.position = 'relative';
 	newMinimizedLabel.style.top = top;
 	newMinimizedLabel.style.left = left;
+	newMinimizedLabel.style.borderRadius = "40%";
 	newMinimizedLabel.style.zIndex = "999999999999999";
 	newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
