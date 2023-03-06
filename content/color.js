@@ -68,7 +68,7 @@ function colorNameTranslate(r,g,b){
 	} 
 	else if ((45 <= hue && hue <= 69) && 12 <= saturation){
 		if (dark){
-			if (hue <= 50) {
+			if (hue <= 55) {
 				return "Dark Yellow"
 			} else {
 				return "Dark Green";
@@ -79,7 +79,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Yellow";
 	}
-	else if ((70 <= hue && hue <= 144) && 12 <= saturation){
+	else if ((70 <= hue && hue <= 139) && 12 <= saturation){
 		if (dark){
 			return "Dark Green";
 		}
@@ -88,7 +88,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Green";
 	}
-	if ((145 <= hue && hue <= 199) && 12 <= saturation){
+	if ((140 <= hue && hue <= 199) && 12 <= saturation){
 			if (dark){
 				return "Dark Teal";
 			}
