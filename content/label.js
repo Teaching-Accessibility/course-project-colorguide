@@ -201,6 +201,7 @@ function createMinimizedLabel (top, left, label) {
 	newMinimizedLabel.style.verticalAlign = "middle";
 	newMinimizedLabel.style.width = "25px";
 	newMinimizedLabel.style.height = "25px";
+	newMinimizedLabel.style.lineHeight = "25px";
 
 	newMinimizedLabel.className = "colorlabel";
 
@@ -208,12 +209,16 @@ function createMinimizedLabel (top, left, label) {
 
 	maximizeButton.style.color = "#ffffff";
 
-	maximizeButton.style.fontSize = "20px";
+	maximizeButton.style.fontSize = "25px";
+
 	maximizeButton.style.position = "relative";
 	maximizeButton.style.margin = "0px";
-	maximizeButton.style.width = newMinimizedLabel.style.width
-	maximizeButton.style.height = newMinimizedLabel.style.height
+	maximizeButton.style.marginLeft = "1px";
+		maximizeButton.style.lineHeight = "25px";
+	// maximizeButton.style.width = newMinimizedLabel.style.width -5 + "px";
+	// maximizeButton.style.height = newMinimizedLabel.style.height -5 + "px";
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
+		maximizeButton.style.fontWeight= "normal";
 	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleLabel(newMinimizedLabel, label)}
