@@ -198,7 +198,7 @@ function createMinimizedLabel (top, left, label) {
 	maximizeButton.style.fontSize = "25px";
 	maximizeButton.style.position = "relative";
 	maximizeButton.style.margin = "0px";
-	maximizeButton.style.marginLeft = "1px";
+	//maximizeButton.style.marginLeft = "1px";
 	maximizeButton.style.lineHeight = "25px";
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
 	maximizeButton.style.fontWeight= "normal";
