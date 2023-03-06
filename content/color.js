@@ -18,7 +18,7 @@ function colorNameTranslate(r,g,b){
 	if ((0 <= hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation <= 74) && (0 <= lightness && lightness <= 10)))){
 		return "Black";
 	}
-	if ((0 <= hue && hue <=100) && ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)) ){
+	if ((0 <= hue && hue <=100) && (((75 <= saturation && saturation <= 100) && (95 <= lightness && lightness <= 100)) || ((0 <= saturation && saturation<= 74) && (90 <= lightness && lightness <= 100)))){
 		return "White";
 	}
 
