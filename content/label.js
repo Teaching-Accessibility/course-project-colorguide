@@ -192,7 +192,7 @@ function createMinimizedLabel (top, left, label) {
 	newMinimizedLabel.style.position = 'absolute';
 	newMinimizedLabel.style.top = top - size/2 + "px" ;
 	newMinimizedLabel.style.left = left - size/2 + "px" ;
-	newMinimizedLabel.style.borderRadius = "40%";
+	newMinimizedLabel.style.borderRadius = "50%";
 	newMinimizedLabel.style.zIndex = "999999999999999";
 	newMinimizedLabel.style.background = "#000000";
 	newMinimizedLabel.style.cursor  = "pointer";
@@ -206,17 +206,13 @@ function createMinimizedLabel (top, left, label) {
 
 	let maximizeButton = document.createElement("p");
 
-	// maximizeButton.style.float = "left";
-	//maximizeButton.style.display ="inline-block;";
 	maximizeButton.style.color = "#ffffff";
+
 	maximizeButton.style.fontSize = "20px";
-	// maximizeButton.style.marginTop = "0px";
-	// maximizeButton.style.marginBottom = "0px";
-	// maximizeButton.style.padding = "5px";
+	maximizeButton.style.position = "relative";
 	maximizeButton.style.width = newMinimizedLabel.style.width
 	maximizeButton.style.height = newMinimizedLabel.style.height
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
-	//maximizeButton.style.fontWeight = "normal";
 	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleLabel(newMinimizedLabel, label)}
