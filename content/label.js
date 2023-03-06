@@ -4,21 +4,20 @@ let statusLabelOff = null;
 let count = 0
 
 function createLabel(x, y, content) {
-	console.log(`x-click: ${x}, y-click: ${y}`);
     let newLabel = document.createElement('div');
 
     newLabel.style.position = 'absolute';
     newLabel.style.zIndex = "999999999999997";
-	newLabel.style.borderRadius = "4px";
+		newLabel.style.borderRadius = "4px";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
     newLabel.style.width = "120px";
     newLabel.style.height = "65px";
-	newLabel.style.border = "1px solid black";
+		newLabel.style.border = "1px solid black";
     newLabel.id = "ColorLabel" + count;
     count ++;
-    newLabel.className = "colorlabel";
+  	newLabel.className = "colorlabel";
 
 	newLabelPosition = labelPosition (x, y, newLabel.style.width, newLabel.style.height)
 
@@ -161,20 +160,8 @@ function addContent (label, content) {
 	textContent.style.color = "#000000";
 	textContent.style.textAlign ="center";
 	textContent.style.margin = "auto";
-
-	// if (content.length <= 6 ){
-	// 	console.log(content);
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "12%";
-	//	textContent.style.paddingLeft= "20%";
-	//	textContent.style.paddingRight = "20%";
-	// } else {
-	// 	textContent.style.fontSize = "18px";
-	// 	textContent.style.paddingLeft= "20%";
-	// 	textContent.style.paddingRight = "20%";
-
-	// }
-
 	textContent.style.fontFamily = "Arial,Calibri,sans-serif";
 	textContent.style.fontWeight = "normal";
 	textContent.className = "colorlabel_child";
@@ -208,22 +195,18 @@ function createMinimizedLabel (top, left, label) {
 	let maximizeButton = document.createElement("p");
 
 	maximizeButton.style.color = "#ffffff";
-
 	maximizeButton.style.fontSize = "25px";
-
 	maximizeButton.style.position = "relative";
 	maximizeButton.style.margin = "0px";
 	maximizeButton.style.marginLeft = "1px";
-		maximizeButton.style.lineHeight = "25px";
-	// maximizeButton.style.width = newMinimizedLabel.style.width -5 + "px";
-	// maximizeButton.style.height = newMinimizedLabel.style.height -5 + "px";
+	maximizeButton.style.lineHeight = "25px";
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
-		maximizeButton.style.fontWeight= "normal";
+	maximizeButton.style.fontWeight= "normal";
 	
 	maximizeButton.className = "colorlabel_child";
 	maximizeButton.onclick = () => {toggleLabel(newMinimizedLabel, label)}
 
-	let  maximizeSymbol = document.createTextNode("+");
+	let maximizeSymbol = document.createTextNode("+");
 	maximizeButton.appendChild(maximizeSymbol);
 	newMinimizedLabel.appendChild(maximizeButton);
 
@@ -306,5 +289,5 @@ function setupStatusLabel () {
 	});
 
 	document.body.appendChild(statusLabelOn);
-    document.body.appendChild(statusLabelOff);
+  document.body.appendChild(statusLabelOff);
 }
