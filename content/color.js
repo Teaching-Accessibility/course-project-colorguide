@@ -15,10 +15,10 @@ function colorNameTranslate(r,g,b){
 		light = true;
 	}
 
-	if (((75 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation < 75) && (0 <= lightness && lightness <= 10))){
+	if (((50 <= saturation && saturation <= 100) && (0 <= lightness && lightness <= 5)) || ((0 <= saturation && saturation < 50) && (0 <= lightness && lightness <= 10))){
 		return "Black";
 	}
-	if (((75 <= saturation && saturation <= 100) && (95 <= lightness && lightness <= 100)) || ((0 <= saturation && saturation < 75) && (90 <= lightness && lightness <= 100))){
+	if (((50 <= saturation && saturation <= 100) && (95 <= lightness && lightness <= 100)) || ((0 <= saturation && saturation < 50) && (90 <= lightness && lightness <= 100))){
 		return "White";
 	}
 
