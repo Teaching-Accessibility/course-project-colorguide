@@ -210,6 +210,7 @@ function createMinimizedLabel (top, left, label) {
 
 	maximizeButton.style.fontSize = "20px";
 	maximizeButton.style.position = "relative";
+	maximizeButton.style.margin = "0px";
 	maximizeButton.style.width = newMinimizedLabel.style.width
 	maximizeButton.style.height = newMinimizedLabel.style.height
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
