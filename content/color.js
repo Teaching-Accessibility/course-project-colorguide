@@ -66,7 +66,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Orange";
 	} 
-	else if ((45 <= hue && hue < 70) && 12 <= saturation){
+	else if ((45 <= hue && hue < 65) && 12 <= saturation){
 		if (dark){
 			if (hue <= 55) {
 				return "Dark Yellow"
@@ -79,7 +79,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Yellow";
 	}
-	else if ((70 <= hue && hue < 140) && 12 <= saturation){
+	else if ((65 <= hue && hue < 140) && 12 <= saturation){
 		if (dark){
 			return "Dark Green";
 		}
