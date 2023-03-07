@@ -7,8 +7,6 @@ function colorNameTranslate(r,g,b){
 	let dark = false;
 	let light = false;
 
-	console.log(`hue: ${hue}, saturation: ${saturation}, lightness: ${lightness}`);
-
 	if (((50 <= saturation && saturation <= 100) && (5 < lightness && lightness <= 25) ) || ((0 <= saturation && saturation < 50) && (10 < lightness && lightness <= 40))){
 		dark = true;
 	} else if (((50 <= saturation && saturation <= 100) && (75 <= lightness && lightness < 95) ) || ((0 <= saturation && saturation < 50) && (60 <= lightness && lightness < 90))){
@@ -137,7 +135,6 @@ function getColor(x, y) {
 		n_shade_name = colorNameTranslate(red, green, blue);
 		listOfNames.push(n_shade_name)
 	}
-//	console.log (listOfNames)
 
 	let mostCommon = listOfNames.sort((a,b) =>
 		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length

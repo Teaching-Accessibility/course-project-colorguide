@@ -13,7 +13,5 @@
 })();
 document.getElementById('start-button').addEventListener('click', () => {
     chrome.runtime.sendMessage({message: 'toggleTool'});
-    // window.close being executed too fast, make message not sent
-    // window.close doesn't seem to work in sendMessage callback
     setTimeout(() => { window.close(); }, 100);
 });
