@@ -1,7 +1,7 @@
 # ColorGuide Online Shopping Assistant
 ##### Table of Contents  
 1. [Group Members](#groupMembers)  
-2. [R1](#r1)  
+2. [R2](#r2)  
    - [Individual Contributions](#indivCon)
    - [Implemented Features](#implFeat) 
    - [Installations Instructions](#install) 
@@ -16,8 +16,8 @@
 
 - ### Natalie 
 
-<a name="r1"></a>
-# R1
+<a name="r2"></a>
+# R2
 
 <a name="indivCon"></a>
 ## Individual Contributions
