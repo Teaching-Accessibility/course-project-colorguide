@@ -114,7 +114,7 @@ There is no simulated back end.
 
 ### Screen 5: Tool turned off
 
-After toggle off the tool either through [Instruction Window](#instruction) , the shortcut `Alt Shift W` or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now wherever users can continue browsing the website, and the label stay where there are. Users can manually close labels, or use the shortcut `Alt Shift R` to close all
+After toggle off the tool either through [Instruction Window](#instruction) , the shortcut `Alt Shift W` or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all
 
 There is no simulated back end.
 
