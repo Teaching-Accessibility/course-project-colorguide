@@ -27,7 +27,7 @@
 Kelley defined the color dictionary we would implement for translating HSL values to color names. She also wrote up UI documentation.
 
 - ### Tin
-Tin worked on the code to create, delete and minimize the tags.
+Tin worked on the code to create, delete, minimize the tags and other functionalities
 
 - ### Natalie 
 Natalie implemented the color dictionary, popup, and worked on coding styling.
@@ -46,8 +46,17 @@ Each tag displays the basic color name value of the pixel selected.
 
 - ### Multiple tags on a page can be minimized/maximized:
 There can be many tags and tags can be minimized/maximized.
+
 - ### Can exit tool and continue browsing, with tags persisting:
 A user can close the eyedropper color tagger and keep all of the tags that exist on the page.
+
+- ### Can remove all label with shortcut:
+A user can remove all tags on page with shortcut `Alt Shift R`
+
+- ### Tool works independently on different tabs:
+A user can toggle tool on/off in a tab and it would not interfere with other tabs
+
+
 
 <a name="install"></a>
 ## Installation Instructions
