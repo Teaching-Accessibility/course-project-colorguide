@@ -24,7 +24,7 @@
 ## Individual Contributions
 
 - ### Kelley 
-Kelley defined the color dictionary we would implement for translating HSL values to color names. She also wrote up UI documentation.
+Kelley defined the color dictionary we implemented for translating HSL values to color names. She also wrote up UI documentation.
 
 - ### Tin
 Tin worked on the code to create, delete, minimize the tags and other functionalities
@@ -68,7 +68,7 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 2. In Chrome, go to this link: `chrome://extensions`, and switch to developer mode (toggle button in upper right hand corner)
 
-3. Press `Load Unpacked` button and select the cloned repo folder
+3. Click `Load Unpacked` button and select the cloned repo folder
 
 4. On Mac and Windows, press `Alt Shift W` to run the extension. Or, select the extension under the puzzle piece icon on the taskbar of Chrome and click the "Open/close the color selector" button.
 
@@ -79,18 +79,18 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 <a name="UIDoc"></a>
 ## UI Documentation 
 
- Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
+Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
  
 <a name="instruction"></a>
 ### Screen 1: Instruction Window
 
-This is the instructions window for how to use the program, which popup when users click on the puzzle piece on Chrome Browser
+This is the instructions window for how to use the program, it comes up when users select to open the extension.
 
 <img width="181" alt="Instruction Window" src="https://user-images.githubusercontent.com/64702845/224153187-11395f76-86c2-480d-a16a-eaeb6944b2aa.png">
 
 ### Screen 2: Tool in use 
 
-After toggle on the tool either through [Instruction Window](#instruction), or the shortcut `Alt Shift W`, a status label will appear in the top right corner. Now, users cannot interact with link and button anymore, but instead, wherever users click a label will be created
+After turning on the tool either through the [Instruction Window](#instruction), or the shortcut `Alt Shift W`, a status label will appear in the top right corner. Now, users cannot interact with buttons or links on the webpage, but instead, wherever users click a label will be created.
 
 There is no simulated back end.
 
@@ -98,7 +98,7 @@ There is no simulated back end.
 
 ### Screen 3: Color Labels
 
-Color labels can be placed anywhere in the Chrome window and include the color name, a minimize button in the upper left, and a close button in the upper right. There is a circle in the upper left corner of the label, which indicates the location where the user clicked.
+Color labels can be placed anywhere on the open website and include the color name of the spot selected, a minimize button in the upper left, and a close button in the upper right. There is a circle in the upper left corner of the label, which indicates the location where the user clicked.
 
 There is no simulated back end.
 
@@ -106,7 +106,7 @@ There is no simulated back end.
 
 ### Screen 4: Minimized Color Labels
 
-When a color label is minimized, it becomes only a white "+" on a black background over the selected spot. If the "+" is clicked, the label will maximize and return to the state it was in before being minimized.
+When a color label is minimized, it becomes only a white "+" on a black background over the selected spot. If the "+" is clicked, the label will re-expand and return to the state it was in before being minimized.
 
 There is no simulated back end.
 
@@ -114,7 +114,7 @@ There is no simulated back end.
 
 ### Screen 5: Tool turned off
 
-After toggle off the tool either through [Instruction Window](#instruction) , the shortcut `Alt Shift W` or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all
+After turning off the tool either through the [Instruction Window](#instruction), the shortcut `Alt Shift W` or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all of the labels at once. The shorcut `Alt Shift R` can be used when the tool is on or off.
 
 There is no simulated back end.
 
