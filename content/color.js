@@ -43,7 +43,7 @@ function colorNameTranslate(r,g,b){
 			return "Dark Red";
 		}
 		if (light){
-			return "Light Red";
+			return "Pink";
 		}
 		return "Red";
 	} else if ((0 <= saturation && saturation < 13) && (11 <= lightness < 90)){
