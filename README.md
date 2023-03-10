@@ -86,7 +86,7 @@ Each screen should have a screen ID, title, a description as to what system feat
 
 This is the instructions window for how to use the program, it comes up when users select to open the extension.
 
-<img width="181" alt="Instruction Window" src="https://user-images.githubusercontent.com/64702845/224153187-11395f76-86c2-480d-a16a-eaeb6944b2aa.png">
+![Screenshot 2023-03-09 203850](https://user-images.githubusercontent.com/91226003/224224923-38e47d51-e0f7-4699-be26-3d205b610288.png)
 
 ### Screen 2: Tool in use 
 
