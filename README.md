@@ -24,7 +24,7 @@
 ## Individual Contributions
 
 - ### Kelley 
-Kelley defined the color dictionary we implemented for translating HSL values to color names. She also wrote up UI documentation.
+Kelley defined the color dictionary we implemented for translating HSL values to color names. She also wrote up UI documentation for R1.
 
 - ### Tin
 Tin worked on the code to create, delete, minimize the tags and other functionalities
@@ -90,7 +90,7 @@ This is the instructions window for how to use the program, it comes up when use
 
 ### Screen 2: Tool in use 
 
-After turning on the tool either through the [Instruction Window](#instruction), or the shortcut `Alt Shift W`, a status label will appear in the top right corner. Now, users cannot interact with buttons or links on the webpage, but instead, wherever users click a label will be created.
+After turning on the tool either through the [Instruction Window](#instruction), or the shortcut `Alt Shift W`, a status label will appear in the top right corner. Now, users cannot interact with buttons or links on the webpage, but instead, wherever users click, a label will be created.
 
 There is no simulated back end.
 
@@ -114,7 +114,7 @@ There is no simulated back end.
 
 ### Screen 5: Tool turned off
 
-After turning off the tool either through the [Instruction Window](#instruction), the shortcut `Alt Shift W` or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all of the labels at once. The shorcut `Alt Shift R` can be used when the tool is on or off.
+After turning off the tool either through the [Instruction Window](#instruction), the shortcut `Alt Shift W`, or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all of the labels at once. The shortcut `Alt Shift R` can be used when the tool is on or off.
 
 There is no simulated back end.
 
