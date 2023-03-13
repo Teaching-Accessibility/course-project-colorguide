@@ -56,6 +56,8 @@ A user can remove all tags on page with shortcut `Alt Shift R`
 - ### Tool works independently on different tabs:
 A user can toggle tool on/off in a tab and it would not interfere with other tabs
 
+- ### Status bar can be toggled
+ To turn the tool on and off, the user can toggle the status bar
 
 
 <a name="install"></a>
