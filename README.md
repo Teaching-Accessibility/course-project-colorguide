@@ -138,7 +138,7 @@ WCAG 1.3.2 Meaningful Sequence: When the sequence in which content is presented 
 
 WCAG 1.3.3 Sensory Characteristics: Instructures provided for understanding and operating content do not rely solely on sensory characteristics of components.
 
-WCAG 1.4.1 Use of Color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or disgtinguishing a visual element.
+WCAG 1.4.1 Use of Color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.
 
 WCAG 1.4.2 Audio Control: There is no automatic audio in our app.
 
@@ -170,20 +170,14 @@ WCAG 2.4.7 Focus Visible: Any keyboard operable user interface has a mode of ope
 
 WCAG 2.5.1 Pointer Gestures: All functionality can be operated with a single pointer without a path-based gesture.
 
-WCAG 2.5.2 Pointer Cancellation: For functionality operated using a single pointer, completion of the function is on the up-event.
-
-WCAG 2.5.3 Label in Name: For user interface components with labels that incude text, the name contains the text that is presented visually.
+WCAG 2.5.3 Label in Name: For user interface components with labels that include text, the name contains the text that is presented visually.
 
 WCAG 2.5.4 Motion Actuation: There is no functionality requiring device motion.
-
-WCAG 2.5.5 Target Size: The size of the targe for pointer inputs is at least 44 by 44 CSS pixels.
 
 WCAG 3.1.1 Language of Page: The default human language can be programmatically determined.
 
 WCAG 3.2.1 On Focus: When any user interface component receives focus, it does not initiate a change of context.
 
 WCAG 3.2.2  On Input: Changing the setting of any user interface component does not automatically cause a change of context unless the use has been advised of the behavior before using the component.
-
-WCAG 4.1.1 Parsing: Elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique.
 
 WCAG 4.1.2 Name, Role, Value: For all user interface components, the name and role can be programmatically determined
