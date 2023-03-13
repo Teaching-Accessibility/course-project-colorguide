@@ -7,11 +7,9 @@ function colorNameTranslate(r,g,b){
 	let dark = false;
 	let light = false;
 
-	console.log(`hue: ${hue}, saturation: ${saturation}, lightness: ${lightness}`);
-
-	if (((75 <= saturation && saturation <= 100) && (5 < lightness && lightness <= 25) ) || ((0 <= saturation && saturation < 75) && (10 < lightness && lightness <= 40))){
+	if (((50 <= saturation && saturation <= 100) && (5 < lightness && lightness <= 25) ) || ((0 <= saturation && saturation < 50) && (10 < lightness && lightness <= 40))){
 		dark = true;
-	} else if (((75 <= saturation && saturation <= 100) && (75 <= lightness && lightness < 95) ) || ((0 <= saturation && saturation < 75) && (60 <= lightness && lightness < 90))){
+	} else if (((50 <= saturation && saturation <= 100) && (75 <= lightness && lightness < 95) ) || ((0 <= saturation && saturation < 50) && (60 <= lightness && lightness < 90))){
 		light = true;
 	}
 
@@ -40,12 +38,12 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Brown";
 	}
-	else if ((0 <= hue && hue < 15 || 345 <= hue && hue <= 360) && 12 <= saturation ){
+	else if ((0 <= hue && hue < 10 || 345 <= hue && hue <= 360) && 12 <= saturation ){
 		if (dark){
 			return "Dark Red";
 		}
 		if (light){
-			return "Light Red";
+			return "Pink";
 		}
 		return "Red";
 	} else if ((0 <= saturation && saturation < 13) && (11 <= lightness < 90)){
@@ -57,7 +55,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Gray";
 	}
-	else if ((15 <= hue && hue < 45) && 12 <= saturation){
+	else if ((10 <= hue && hue < 40) && 12 <= saturation){
 		if (dark){
 			return "Brown";
 		}
@@ -66,7 +64,7 @@ function colorNameTranslate(r,g,b){
 		}
 		return "Orange";
 	} 
-	else if ((45 <= hue && hue < 65) && 12 <= saturation){
+	else if ((40 <= hue && hue < 65) && 12 <= saturation){
 		if (dark){
 			if (hue <= 55) {
 				return "Dark Yellow"
@@ -137,7 +135,6 @@ function getColor(x, y) {
 		n_shade_name = colorNameTranslate(red, green, blue);
 		listOfNames.push(n_shade_name)
 	}
-//	console.log (listOfNames)
 
 	let mostCommon = listOfNames.sort((a,b) =>
 		listOfNames.filter(v => v===a).length - listOfNames.filter(v => v===b).length

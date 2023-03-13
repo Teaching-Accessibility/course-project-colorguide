@@ -8,19 +8,21 @@ function createLabel(x, y, content) {
 
     newLabel.style.position = 'absolute';
     newLabel.style.zIndex = "999999999999997";
-		newLabel.style.borderRadius = "4px";
+	newLabel.style.borderRadius = "4px";
     newLabel.style.background = "#ffffff";
     newLabel.style.cursor  = "pointer";
     newLabel.style.display = "block"
     newLabel.style.width = "120px";
     newLabel.style.height = "65px";
-		newLabel.style.border = "1px solid black";
+	newLabel.style.border = "1px solid black";
+
     newLabel.id = "ColorLabel" + count;
     count ++;
-  	newLabel.className = "colorlabel";
+	newLabel.className = "colorlabel";
 
 	newLabelPosition = labelPosition (x, y, newLabel.style.width, newLabel.style.height)
 
+	// Make sure label stay inside tab boundary
 	const circleLabelSize = 12
 	switch (newLabelPosition) {
 		case 'top left':
@@ -51,12 +53,12 @@ function createLabel(x, y, content) {
 	addCloseButton(newLabel);
 	addContent(newLabel, content);
 	document.body.appendChild(newLabel);
+
 	let newMinimizedLabel = createMinimizedLabel (x, y, newLabel);
 	document.body.appendChild(newMinimizedLabel);
 }
 
 function labelPosition(top, left, width, height) {
-	console.log(`label top: ${top}, label left: ${left}`);
 	top = parseInt(top)
 	left = parseInt(left)
 	width = parseInt(width)
@@ -95,15 +97,13 @@ function addCloseButton(label) {
 	closeButton.style.fontSize = "20px";
 	closeButton.style.paddingRight= "4px";
 	closeButton.style.paddingTop = "0px";
-	
-
+	closeButton.style.fontFamily = "Arial,Calibri,sans-serif";
+	closeButton.style.fontWeight = "normal";
 	closeButton.className = "colorlabel_child";
 	closeButton.onclick = () => {
 		label.style.display = "none"
         label.parentNode.removeChild(label);
     };
-	closeButton.style.fontFamily = "Arial,Calibri,sans-serif";
-	closeButton.style.fontWeight = "normal";
 
 	let closeSymbol = document.createTextNode("✕");
 	closeButton.appendChild(closeSymbol);
@@ -125,14 +125,12 @@ function addMinimizeButton(label, func) {
 	minimizeButton.style.fontWeight = "normal";
 	minimizeButton.style.paddingLeft = "5px";
 	minimizeButton.style.paddingTop = "0px";
-
-	minimizeButton.className = "colorlabel_child";
-	minimizeButton.onclick = func;
 	minimizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
 	minimizeButton.style.fontWeight = "normal";
+	minimizeButton.className = "colorlabel_child";
+	minimizeButton.onclick = func;
 
 	let minimizeSymbol = document.createTextNode("―");
-
 	minimizeButton.appendChild( minimizeSymbol);
 
 	label.appendChild( minimizeButton);
@@ -140,6 +138,7 @@ function addMinimizeButton(label, func) {
 
 function addCircle(label, top, left, size) {
 	let circle = document.createElement("p");
+
 	circle.style.position = 'relative';
 	circle.style.margin = "0px";
     circle.style.top = top;
@@ -167,7 +166,6 @@ function addContent (label, content) {
 	textContent.className = "colorlabel_child";
 
 	textContent.appendChild(document.createTextNode(content));
-
 	label.appendChild(textContent);
 }
 
@@ -189,16 +187,13 @@ function createMinimizedLabel (top, left, label) {
 	newMinimizedLabel.style.width = "25px";
 	newMinimizedLabel.style.height = "25px";
 	newMinimizedLabel.style.lineHeight = "25px";
-
 	newMinimizedLabel.className = "colorlabel";
 
 	let maximizeButton = document.createElement("p");
-
 	maximizeButton.style.color = "#ffffff";
 	maximizeButton.style.fontSize = "25px";
 	maximizeButton.style.position = "relative";
 	maximizeButton.style.margin = "0px";
-	//maximizeButton.style.marginLeft = "1px";
 	maximizeButton.style.lineHeight = "25px";
 	maximizeButton.style.fontFamily = "Arial,Calibri,sans-serif";
 	maximizeButton.style.fontWeight= "normal";
@@ -239,12 +234,11 @@ function createStatusLabel (content) {
 	newStatusLabel.style.zIndex = "999999999999999";
 	newStatusLabel.style.display = "none";
 	newStatusLabel.style.cursor  = "pointer";
-	// Stop text being chosen when dbl clicking
 	newStatusLabel.style.userSelect = "none"
-
 	newStatusLabel.className = "statuslabel";
 
 	addCloseButton (newStatusLabel)
+
 	let textContent = document.createElement("p");
 
 	textContent.style.color = "#000000";
@@ -253,7 +247,6 @@ function createStatusLabel (content) {
 	textContent.style.margin = "auto";
 	textContent.style.fontSize = "18px";
 	textContent.style.paddingTop = "2%";
-
 	textContent.className = "colorlabel_child";
 	textContent.appendChild(document.createTextNode(content));
 
@@ -289,5 +282,5 @@ function setupStatusLabel () {
 	});
 
 	document.body.appendChild(statusLabelOn);
-  document.body.appendChild(statusLabelOff);
+	document.body.appendChild(statusLabelOff);
 }

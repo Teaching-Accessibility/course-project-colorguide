@@ -1,12 +1,12 @@
 # ColorGuide Online Shopping Assistant
 ##### Table of Contents  
 1. [Group Members](#groupMembers)  
-2. [R1](#r1)  
+2. [R2](#r2)  
    - [Individual Contributions](#indivCon)
    - [Implemented Features](#implFeat) 
    - [Installations Instructions](#install) 
    - [UI Documentation](#UIDoc) 
- 
+   - [Design Guidelines](#guideline) 
 <a name="groupMembers"></a>
 ## Group Members
 
@@ -16,17 +16,18 @@
 
 - ### Natalie 
 
-<a name="r1"></a>
-# R1
+<a name="r2"></a>
+# R2
+
 
 <a name="indivCon"></a>
 ## Individual Contributions
 
 - ### Kelley 
-Kelley defined the color dictionary we would implement for translating HSL values to color names. She also wrote up UI documentation.
+Kelley defined the color dictionary we implemented for translating HSL values to color names. She also wrote up UI documentation for R1.
 
 - ### Tin
-Tin worked on the code to create, delete and minimize the tags.
+Tin worked on the code to create, delete, minimize the tags and other functionalities
 
 - ### Natalie 
 Natalie implemented the color dictionary, popup, and worked on coding styling.
@@ -45,8 +46,17 @@ Each tag displays the basic color name value of the pixel selected.
 
 - ### Multiple tags on a page can be minimized/maximized:
 There can be many tags and tags can be minimized/maximized.
+
 - ### Can exit tool and continue browsing, with tags persisting:
 A user can close the eyedropper color tagger and keep all of the tags that exist on the page.
+
+- ### Can remove all label with shortcut:
+A user can remove all tags on page with shortcut `Alt Shift R`
+
+- ### Tool works independently on different tabs:
+A user can toggle tool on/off in a tab and it would not interfere with other tabs
+
+
 
 <a name="install"></a>
 ## Installation Instructions
@@ -58,7 +68,7 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 
 2. In Chrome, go to this link: `chrome://extensions`, and switch to developer mode (toggle button in upper right hand corner)
 
-3. Press `Load Unpacked` button and select the cloned repo folder
+3. Click `Load Unpacked` button and select the cloned repo folder
 
 4. On Mac and Windows, press `Alt Shift W` to run the extension. Or, select the extension under the puzzle piece icon on the taskbar of Chrome and click the "Open/close the color selector" button.
 
@@ -69,45 +79,50 @@ git clone https://github.com/Teaching-Accessibility/course-project-colorguide.gi
 <a name="UIDoc"></a>
 ## UI Documentation 
 
- Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
+Each screen should have a screen ID, title, a description as to what system features the user and computer interaction represents, and explain the design guidelines you followed. Explain where simulated back end was used, if any, and provide rationale.
+ 
+<a name="instruction"></a>
+### Screen 1: Instruction Window
 
-<img width="181" alt="Screenshot 2023-02-16 103941" src="https://user-images.githubusercontent.com/71570112/219457812-4e3561bc-5835-4f7f-a62c-4f1ca808135a.png">
+This is the instructions window for how to use the program, it comes up when users select to open the extension.
 
-Screen 1: Home Page
+![Screenshot 2023-03-09 203850](https://user-images.githubusercontent.com/91226003/224225128-71810000-20bd-4005-ad79-314ed127bc7d.png)
 
-This is the window that includes the instructions for how to use the program, as well as has a button to start it. 
+### Screen 2: Tool in use 
 
-There is no simulated back end.
-
-
-<img width="925" alt="Screenshot 2023-02-16 103908" src="https://user-images.githubusercontent.com/71570112/219457834-4a8bb82c-1ed5-46df-a90a-c1a1886dcc52.png">
-
-Screen 2: Program in Use
-
-This is a combined view of five placed color labels and the home page. 
+After turning on the tool either through the [Instruction Window](#instruction), or the shortcut `Alt Shift W`, a status label will appear in the top right corner. Now, users cannot interact with buttons or links on the webpage, but instead, wherever users click, a label will be created.
 
 There is no simulated back end.
 
+<img width="925" alt="Full Screen View" src="https://user-images.githubusercontent.com/64702845/224154070-82661e4f-bd32-4a5e-bc55-cbeaccb5f884.png">
 
-<img width="308" alt="Screenshot 2023-02-15 204753" src="https://user-images.githubusercontent.com/71570112/219271431-05cacb9b-0206-49b6-a339-8f2445d85443.png">
-Screen 3: Color Labels
+### Screen 3: Color Labels
 
-Color labels can be placed anywhere in the Chrome window and include the color name, a minimize button in the upper left, and a close button in the upper right. The upper left corner of the label is the location where the user clicked for the color label.
-
-There is no simulated back end.
-
-
-<img width="325" alt="Screenshot 2023-02-15 204818" src="https://user-images.githubusercontent.com/71570112/219271421-bdd0db35-1694-43a0-9976-716d0d41a790.png">
-
-Screen 4: Minimized Color Labels
-
-When a color label is minimized, it becomes only a white "+" on a black background over the selected spot. If the "+" is selected, the label will maximize and return to the state it was in before being minimized.
+Color labels can be placed anywhere on the open website and include the color name of the spot selected, a minimize button in the upper left, and a close button in the upper right. There is a circle in the upper left corner of the label, which indicates the location where the user clicked.
 
 There is no simulated back end.
 
+<img width="325" alt="Color Labels" src="https://user-images.githubusercontent.com/64702845/224150228-e3748516-317d-45ef-abd6-4767ca58ca61.png">
+
+### Screen 4: Minimized Color Labels
+
+When a color label is minimized, it becomes only a white "+" on a black background over the selected spot. If the "+" is clicked, the label will re-expand and return to the state it was in before being minimized.
+
+There is no simulated back end.
+
+<img width="325"  alt="Minimized Color Labels" src="https://user-images.githubusercontent.com/64702845/224150617-93b6557a-e5cc-4154-887e-af7eecfbaedb.png">
+
+### Screen 5: Tool turned off
+
+After turning off the tool either through the [Instruction Window](#instruction), the shortcut `Alt Shift W`, or double clicking the status label, the status label will indicate the tool is turned off, then disappear after some seconds. Now users can continue browsing the website, and the labels stay where there are. Users can manually close each label, or use the shortcut `Alt Shift R` to close all of the labels at once. The shortcut `Alt Shift R` can be used when the tool is on or off.
+
+There is no simulated back end.
+
+<img width="925" alt="Full Screen View" src="https://user-images.githubusercontent.com/64702845/224157208-fe516320-8e39-4783-8273-7e586e4df41b.png">
 
 
-Design guidelines followed: 
+<a name="guideline"></a>
+## Design Guidelines
 
 Since we only have a few screens with very limited differences between them, the design guidelines followed apply to the entire application as a whole.
 
