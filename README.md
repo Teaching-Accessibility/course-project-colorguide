@@ -142,7 +142,7 @@ WCAG 1.4.1 Use of Color: Color is not used as the only visual means of conveying
 
 WCAG 1.4.2 Audio Control: There is no automatic audio in our app.
 
-WCAG 1.4.6 Contrast (Enchanced): The visual presentation of text and images of text has a contrast ratio of at least 7:1
+WCAG 1.4.6 Contrast (Enhanced): The visual presentation of text and images of text has a contrast ratio of at least 7:1. (The elements of our application have a contrast of 14 or greater)
 
 WCAG 1.4.7 Low or No Background Audio: There is no prerecorded audio-only content
 
