@@ -4,12 +4,14 @@
   "description": "This browser extension allows users to see the simple color labels of products. Our goal is to eliminate confusion surrounding the colors of products when shopping online by providing simple color labels. ",
   "version": "1.0",
   "icons": {
-    "16": "/images/16-1.png",
-    "19": "/images/19-1.png",
-    "32": "/images/32-1.png",
-    "38": "/images/38-1.png",
-    "48": "/images/48-1.png",
-    "128": "/images/128-1.png"
+    "16": "/images/16.png",
+    "19": "/images/19.png",
+    "32": "/images/32.png",
+    "38": "/images/38.png",
+    "64": "/images/64.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+
   },
   "permissions": [
     "background",
@@ -52,9 +54,13 @@
       }
     }
   },
-  "action": {
-    "default_popup": "popup/popup.html"
-  }
+"action": {
+   "default_icon": {                    
+     "19": "/images/19.png",      
+     "38": "/images/38.png"         
+   },
+   "default_popup": "popup/popup.html"       
+}
 
 }
 
